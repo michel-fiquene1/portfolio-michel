@@ -214,11 +214,16 @@ nav.open{display:flex}
 @media(max-width:560px){.sk,.pg,.ce,.cards{grid-template-columns:1fr}section{padding:72px 18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 /* Assistant temporarily stationary; chat remains available. */
-.bot{left:auto;right:14px;transform:none!important}
+.bot,.bon,.cp{--assistant-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+.bot{left:auto;right:14px;bottom:var(--assistant-bottom);transform:none!important}
+.bon{bottom:var(--assistant-bottom)}
+.cp{bottom:calc(var(--assistant-bottom) + 134px);max-height:min(460px,calc(100vh - var(--assistant-bottom) - 218px));max-height:min(460px,calc(100dvh - var(--assistant-bottom) - 218px));overflow-y:auto}
+.cp .ch,.cp .chips,.cp .cf,.cp .m{flex-shrink:0}
 .bk,.bk:active{cursor:pointer;touch-action:auto}
 .bot svg,.bot svg *{animation:none!important;transition:none!important}
 .bb{display:none}
-.cp.compact{bottom:calc(58px + env(safe-area-inset-bottom,0px))}
+.cp.compact{bottom:calc(var(--assistant-bottom) + 44px)}
+@media(max-height:700px){.cp,.cp.compact{bottom:var(--assistant-bottom);max-height:min(460px,calc(100vh - var(--assistant-bottom) - 84px));max-height:min(460px,calc(100dvh - var(--assistant-bottom) - 84px))}}
 
 .game-shell{background:linear-gradient(180deg,color-mix(in srgb,var(--bg2) 92%,transparent),var(--bg2));border:1px solid var(--bd);border-radius:28px;overflow:hidden;box-shadow:0 24px 60px -42px var(--glow)}
 .game-top,.game-actions,.game-help{padding:18px 22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
