@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Michel Fiquene | Portfólio</title>
+<meta name="description" content="Portfólio de Michel Fiquene, estudante de Análise e Desenvolvimento de Sistemas e Administração. Python, desenvolvimento web e negócios.">
+<link rel="icon" type="image/jpeg" href="assets/images/michel-logo.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f6f5fb;--bg2:#fff;--tx:#161a2e;--mut:#5b6280;--ac:#6d4fe0;--ac2:#e0860b;--bd:#dcd9ee;--glow:rgba(109,79,224,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0d1c;--bg2:#111528;--tx:#eef0fa;--mut:#9aa1c4;--ac:#9b87ff;--ac2:#ffb020;--bd:#23284a;--glow:rgba(155,135,255,.2)}}
+:root[data-theme="dark"]{--bg:#0a0d1c;--bg2:#111528;--tx:#eef0fa;--mut:#9aa1c4;--ac:#9b87ff;--ac2:#ffb020;--bd:#23284a;--glow:rgba(155,135,255,.2)}
+html{scroll-behavior:smooth;scroll-padding-top:84px;height:auto}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 "Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:60}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav{max-width:1120px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem}
+.logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--bd)}
+.logo b{color:var(--ac2)}
+nav{display:flex;gap:4px;margin:0 auto}
+nav a{padding:6px 10px;border-radius:999px;color:var(--mut);font-size:.9rem;font-weight:500;border:1px solid transparent;transition:.25s}
+nav a:hover{color:var(--tx)}
+nav a.on{color:var(--ac2);border-color:var(--ac2)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:14px;font-weight:700;background:linear-gradient(135deg,var(--ac2),#ff8a1f);color:#1a1200;box-shadow:0 8px 24px -8px var(--ac2);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.ib{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--bd);color:var(--mut);cursor:pointer;transition:.2s}
+.ib:hover{color:var(--ac2);border-color:var(--ac2);transform:translateY(-3px)}
+.lg{width:auto;padding:0 12px;display:flex;align-items:center;gap:6px;font:700 .8rem/1 inherit;font-family:inherit}
+.menu{display:none}
+section{max-width:1120px;margin:auto;padding:96px 20px;position:relative}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.ttl{text-align:center;margin-bottom:48px}
+.ttl small{color:var(--ac2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem}
+.ttl h2{font-size:clamp(2rem,5vw,3rem);margin:6px 0 0;line-height:1.1}
+#inicio{min-height:calc(100vh - 62px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:48px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--bg2);border:1px solid var(--bd);color:var(--ac2);font-size:.85rem;font-weight:500}
+.badge i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+.hi{color:var(--mut);font-size:1.3rem;margin:26px 0 0}
+h1{font-size:clamp(3rem,8vw,5.4rem);line-height:1;margin:6px 0 14px;letter-spacing:-.02em}
+h1 span{display:block;color:var(--ac2)}
+.role{font-size:clamp(1.2rem,3vw,1.8rem);color:var(--mut);min-height:2.4em}
+.role::after{content:"";display:inline-block;width:3px;height:1.1em;background:var(--ac2);margin-left:4px;vertical-align:-3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:28px}
+.ph{position:relative;justify-self:center;width:min(100%,400px)}
+.ph::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--bd);border-radius:28px}
+.ph img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;border-radius:28px;display:block;box-shadow:0 30px 80px -30px var(--glow)}
+.scroll{position:absolute;bottom:18px;left:50%;font-size:.7rem;letter-spacing:.2em;color:var(--mut)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.about .ph::before{inset:14px 14px -14px -14px}
+.about h3{font-size:2rem;margin:0 0 4px}
+.about h3 span,.ac{color:var(--ac2)}
+.about p{color:var(--mut);max-width:62ch}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0}
+.c{background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;min-width:0}
+.c small{display:block;color:var(--ac2);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.c span,.c a{overflow-wrap:anywhere;font-size:.93rem}
+.c a:hover{color:var(--ac2)}
+.sk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.k{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:22px;transition:.25s}
+.k:hover{border-color:var(--ac);transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--glow)}
+.k h3{margin:0 0 12px;font-size:1.05rem;color:var(--ac2)}
+.tg{display:flex;flex-wrap:wrap;gap:8px}
+.tg span{padding:4px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--bd);font-size:.85rem;color:var(--mut)}
+.pf{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;background:var(--bg2);border:1px solid var(--bd);border-radius:24px;padding:28px;margin-bottom:22px}
+.win{border-radius:12px;overflow:hidden;background:#161b33;border:1px solid var(--bd)}
+.win div{display:flex;gap:6px;padding:10px 12px}.win div i{width:10px;height:10px;border-radius:50%;background:#ef4444}.win div i+i{background:#f59e0b}.win div i+i+i{background:#22c55e}
+.shot{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(135deg,#2a1f66,#0f2a4a);color:#fff;text-align:center;padding:16px}
+.shot svg{width:56px;height:56px;margin-bottom:8px;opacity:.9}
+.shot em{font-style:normal;font-size:.8rem;opacity:.7}
+.tag{display:inline-block;padding:3px 12px;border-radius:999px;border:1px solid var(--ac2);color:var(--ac2);font-size:.78rem;font-weight:500}
+.pf h3,.p h3{font-size:1.7rem;margin:12px 0 8px;line-height:1.2}
+.pf p,.p p{color:var(--mut);margin:0 0 14px}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.p{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;padding:22px;transition:.25s}
+.p:hover{border-color:var(--ac);transform:translateY(-4px)}
+.p h3{font-size:1.25rem}
+.lk{display:inline-flex;gap:6px;align-items:center;margin-top:12px;color:var(--ac2);font-weight:700;font-size:.9rem}
+.tl{position:relative;max-width:760px;margin:auto;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--ac),var(--ac2))}
+.t{position:relative;background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:20px 22px;margin-bottom:20px}
+.t::before{content:"";position:absolute;left:-34px;top:24px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--ac2)}
+.t time{color:var(--ac2);font-weight:700;font-size:.85rem}
+.t h3{margin:2px 0 6px;font-size:1.2rem}
+.t p{margin:0;color:var(--mut)}
+.ce{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ce div{background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.ce b{font-size:.95rem}.ce span{color:var(--mut);font-size:.85rem}.ce small{color:var(--ac2);font-weight:700;font-size:.78rem}
+.ct{text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:28px;padding:56px 24px}
+.ct h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin:0 0 10px}.ct p{color:var(--mut);max-width:52ch;margin:0 auto}
+.ct .row{justify-content:center}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:960px;margin:auto;align-items:start}
+.fm,.ci{min-width:0}
+.fm{background:var(--bg2);border:1px solid var(--bd);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.fm h3,.ci h3{margin:0;font-size:1.4rem}
+.fm p,.ci>p{margin:0;color:var(--mut);font-size:.9rem}
+.fm input,.fm textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:.92rem}
+.fm textarea{min-height:120px;resize:vertical}
+.fm input::placeholder,.fm textarea::placeholder{color:var(--mut)}
+.fm input:focus,.fm textarea:focus{outline:none;border-color:var(--ac2)}
+.fm .btn{justify-content:center;border:0;font:inherit;font-weight:700;cursor:pointer;width:100%}
+.st{font-size:.85rem;color:var(--mut);min-height:1.2em}
+.ci{display:flex;flex-direction:column;gap:14px}
+.ci>p{margin-bottom:6px}
+.ic{display:flex;align-items:center;gap:16px;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:18px 20px;transition:.25s}
+a.ic:hover{border-color:var(--ac2);transform:translateY(-2px)}
+.ic>span:first-child{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--ac2) 14%,transparent);border:1px solid color-mix(in srgb,var(--ac2) 40%,transparent);color:var(--ac2);flex:none}
+.ic b{display:block;font-size:.95rem}.ic small{color:var(--mut);font-size:.88rem;overflow-wrap:anywhere}
+.cn{margin-top:14px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.cn+.row{margin-top:0}
+.bot{position:fixed;left:0;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:70;width:70px;will-change:transform}.bot.ret{transition:transform .7s cubic-bezier(.3,.7,.3,1)}
+.bk{display:block;width:70px;height:123px;padding:0;border:0;background:none;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}.bk:active{cursor:grabbing}
+.bk svg{width:100%;height:100%;overflow:visible}
+.bb{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:max-content;max-width:190px;background:var(--bg2);color:var(--tx);border:1px solid var(--ac2);border-radius:12px;padding:7px 11px;font-size:.8rem;line-height:1.35;box-shadow:0 8px 24px -8px var(--glow);opacity:0;pointer-events:none;transition:opacity .3s}
+.bb.on{opacity:1}.bb.l{left:0;transform:none}.bb.r{left:auto;right:0;transform:none}
+.cp{position:fixed;right:14px;bottom:calc(146px + env(safe-area-inset-bottom,0px));width:min(340px,calc(100vw - 28px));max-height:min(460px,calc(100vh - 170px));display:none;flex-direction:column;background:var(--bg2);border:1px solid var(--bd);border-radius:18px;box-shadow:0 24px 60px -20px rgba(0,0,0,.5);z-index:71;overflow:hidden}
+.cp.open{display:flex}
+.ch{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid var(--bd)}#cx{order:2}.ch button:not(#cx){order:3}
+.ch b{margin-right:auto;font-size:.85rem;white-space:nowrap}.ch button{white-space:nowrap}
+.ch button,.chips button,.gb{font:inherit;font-size:.75rem;color:var(--mut);background:var(--bg);border:1px solid var(--bd);border-radius:999px;padding:3px 10px;cursor:pointer}
+.ch button:hover,.chips button:hover,.gb:hover{color:var(--ac2);border-color:var(--ac2)}
+.ms{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.m{max-width:88%;padding:8px 12px;border-radius:14px;font-size:.88rem;line-height:1.45;overflow-wrap:anywhere}
+.m.b{background:var(--bg);border:1px solid var(--bd);align-self:flex-start}
+.m.u{background:var(--ac2);color:#1a1200;align-self:flex-end}
+.gb{display:block;margin-top:6px;color:var(--ac2);border-color:var(--ac2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
+.cf{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--bd)}
+.cf input{flex:1;min-width:0;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:.88rem}
+.cf button{border:0;border-radius:10px;padding:0 14px;background:var(--ac2);color:#1a1200;font:inherit;font-weight:700;cursor:pointer}
+.bon{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:70;display:none;font:inherit;font-size:.8rem;color:var(--mut);background:var(--bg2);border:1px solid var(--bd);border-radius:999px;padding:7px 14px;cursor:pointer}
+.bon:hover{color:var(--ac2);border-color:var(--ac2)}
+.bot .a1,.bot .lA,.bot .lB{transform-box:view-box}
+.bot .a1{transform-origin:17px 42px}.bot .lA{transform-origin:25px 64px}.bot .lB{transform-origin:39px 64px}
+.bot.wave .a1{animation:wv .6s ease-in-out infinite alternate;transform:rotate(145deg)}
+.bot.walk .lA{animation:sw .45s ease-in-out infinite alternate}.bot.walk .lB{animation:sw .45s ease-in-out infinite alternate-reverse}
+.bot.walk svg{animation:bp .45s ease-in-out infinite alternate}
+@keyframes wv{from{transform:rotate(138deg)}to{transform:rotate(170deg)}}
+@keyframes sw{from{transform:rotate(16deg)}to{transform:rotate(-16deg)}}
+@keyframes bp{to{transform:translateY(-2px)}}
+.pad{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:72;display:none;flex-direction:column;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:10px;max-width:200px}
+.pad.on{display:flex}.pad div{display:flex;gap:6px}
+.pad button{width:44px;height:44px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;cursor:pointer;touch-action:none}
+.pad button:active{border-color:var(--ac2);color:var(--ac2)}
+.pad small{color:var(--mut);font-size:.72rem;text-align:center;line-height:1.3}
+@property --sp{syntax:"<number>";inherits:false;initial-value:0}
+.sk,.ce{perspective:1100px}
+.k,.ce div{position:relative;overflow:hidden;background:radial-gradient(240px circle at var(--mx,-300px) var(--my,-300px),hsl(var(--hue,265) 95% 65%/var(--sp,0)),transparent 70%),var(--bg2);transition:opacity .7s,transform .7s,rotate .18s ease-out,translate .25s,border-color .3s,box-shadow .3s,--sp .3s}
+.sk{counter-reset:k}.k{counter-increment:k}
+.k:hover{transform:none;translate:0 -5px;border-color:transparent;box-shadow:0 24px 50px -26px hsl(var(--hue,265) 90% 60%/.55)}
+.ce div:hover{translate:0 -4px;border-color:transparent;box-shadow:0 20px 40px -26px hsl(var(--hue,265) 90% 60%/.5)}
+.k::after,.ce div::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;background:radial-gradient(190px circle at var(--mx,-300px) var(--my,-300px),hsl(var(--hue,265) 100% 70%),transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .3s}
+.k:hover::after,.ce div:hover::after{opacity:1}
+.k>*:not(.zap),.ce div>*:not(.zap){position:relative;z-index:1}
+.zap{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;-webkit-mask-image:radial-gradient(170px circle at var(--mx,-300px) var(--my,-300px),#000,rgba(0,0,0,.2) 85%);mask-image:radial-gradient(170px circle at var(--mx,-300px) var(--my,-300px),#000,rgba(0,0,0,.2) 85%)}
+.zap .tr{fill:none;stroke:hsl(var(--hue,265) 85% 65%);stroke-width:1.2;stroke-linejoin:round;opacity:.55}
+.zap .nd{fill:hsl(var(--hue,265) 90% 70%);opacity:.8}
+.k:hover .zap .tr,.ce div:hover .zap .tr{stroke-dasharray:.06 .08;animation:flow 1.1s linear infinite}
+.zap .tr.grow{animation:grow 1.2s ease-out}
+.zap .tr.brk{stroke-dasharray:.03 .11!important;animation:none!important;opacity:.14}
+@keyframes flow{to{stroke-dashoffset:-.28}}
+@keyframes grow{from{stroke-dasharray:0 1}to{stroke-dasharray:1 0}}
+.k h3{display:flex;align-items:center;gap:8px}
+.k h3::before{content:"0" counter(k);font:700 .75rem ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ac);border:1px solid var(--bd);border-radius:6px;padding:2px 6px}
+.k h3::after{content:"";margin-left:auto;margin-right:24px;width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:12px 0 #f59e0b,24px 0 #ef4444}
+.k .tg span{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;cursor:default;transition:transform .2s,color .2s,border-color .2s,box-shadow .2s}
+.k .tg span::before{content:"› ";color:var(--ac)}
+.k .tg span:hover{transform:translateY(-2px);color:var(--tx);border-color:hsl(var(--hue,265) 80% 65%);box-shadow:0 0 14px -2px hsl(var(--hue,265) 90% 60%/.6)}
+.ce div{padding:16px 18px 16px 76px;min-height:80px;justify-content:center}
+.ce div::before{content:attr(data-m);position:absolute;left:16px;top:50%;translate:0 -50%;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;font:700 .72rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em;color:hsl(var(--hue,265) 90% 72%);border:1px solid hsl(var(--hue,265) 70% 60%/.5);background:hsl(var(--hue,265) 70% 55%/.12);transition:transform .3s,background .3s;z-index:1}
+.ce div:hover::before{transform:rotate(-6deg) scale(1.08);background:hsl(var(--hue,265) 80% 55%/.28)}
+.ce b{align-self:flex-start;padding-bottom:2px;background:linear-gradient(hsl(var(--hue,265) 90% 65%),hsl(var(--hue,265) 90% 65%)) no-repeat 0 100%/0 2px;transition:background-size .4s}
+.ce div:hover b{background-size:100% 2px}
+.hit{animation:hit .4s}
+.tg span.pop{animation:pop .8s}
+@keyframes hit{25%{translate:-3px 1px}50%{translate:3px -1px}75%{translate:-2px 0}}
+@keyframes pop{30%{transform:translateY(-12px) rotate(-14deg) scale(1.15)}60%{transform:translate(4px,3px) rotate(8deg)}}
+.sp{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--ac2);box-shadow:0 0 8px var(--ac2);pointer-events:none;z-index:69;animation:spk .6s ease-out forwards}
+@keyframes spk{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+.bot.slap .a1{animation:sl .5s ease-in-out}
+@keyframes sl{0%,40%{transform:rotate(150deg)}70%{transform:rotate(55deg)}100%{transform:rotate(0)}}
+.bot.shoot .a1{transform:rotate(var(--aim,95deg))}
+.gun{display:none}.bot.shoot .gun{display:block}
+.dq{position:fixed;z-index:73;width:240px;display:none;background:var(--bg2);color:var(--tx);border:1px solid var(--ac2);border-radius:14px;padding:11px 13px;box-shadow:0 18px 40px -16px rgba(0,0,0,.55)}
+.dq.on{display:block}
+.dq p{margin:0 0 9px;font-size:.88rem;line-height:1.35}
+.dq div{display:flex;gap:8px}
+.dq button{font:inherit;font-size:.8rem;border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--tx);background:var(--bg);border:1px solid var(--bd)}
+.dq button#dy{background:var(--ac2);border-color:var(--ac2);color:#1a1200;font-weight:700}
+.dq small{display:block;margin-top:8px;color:var(--mut);font-size:.72rem}
+.shot{position:fixed;width:9px;height:9px;margin:-4px 0 0 -4px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px var(--ac2),0 0 22px 8px var(--ac);z-index:74;pointer-events:none;transition:left .22s linear,top .22s linear}
+.bm{position:fixed;z-index:74;pointer-events:none;font-size:30px;line-height:1;animation:bm .55s ease-out forwards}
+@keyframes bm{from{transform:translate(-50%,-50%) scale(.3);opacity:1}to{transform:translate(-50%,-50%) scale(1.5);opacity:0}}
+.dmg .zap{-webkit-mask-image:none;mask-image:none}
+.dmg .zap .tr{opacity:.9}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:28px 20px 36px}
+@media(max-width:860px){
+#inicio,.about,.pf,.cg{grid-template-columns:1fr}
+#inicio .ph{order:-1;width:min(70%,300px)}
+.sk,.pg,.ce{grid-template-columns:1fr 1fr}
+nav{position:fixed;inset:60px 12px auto 12px;flex-direction:column;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:10px;display:none;margin:0}
+nav.open{display:flex}
+#th{margin-left:auto}.menu{display:grid}
+.hd{display:none}.scroll{display:none}
+}
+@media(max-width:560px){.sk,.pg,.ce,.cards{grid-template-columns:1fr}section{padding:72px 18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+/* Assistant temporarily stationary; chat remains available. */
+.bot{left:auto;right:14px;transform:none!important}
+.bk,.bk:active{cursor:pointer;touch-action:auto}
+.bot svg,.bot svg *{animation:none!important;transition:none!important}
+.bb{display:none}
+.cp.compact{bottom:calc(58px + env(safe-area-inset-bottom,0px))}
+
+.game-shell{background:linear-gradient(180deg,color-mix(in srgb,var(--bg2) 92%,transparent),var(--bg2));border:1px solid var(--bd);border-radius:28px;overflow:hidden;box-shadow:0 24px 60px -42px var(--glow)}
+.game-top,.game-actions,.game-help{padding:18px 22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.game-top{justify-content:space-between;border-bottom:1px solid var(--bd)}
+.game-top strong{color:var(--ac2);letter-spacing:.08em}
+.game-top small{display:block;color:var(--mut);font-size:.78rem;margin-top:2px}
+.game-stats{font-size:.85rem;color:var(--mut)}
+.game-copy{padding:0 22px 18px;color:var(--mut);font-size:.92rem;line-height:1.6}
+.game-copy p{margin:0}
+#gameCanvas{display:block;width:100%;aspect-ratio:8/3;background:linear-gradient(180deg,#070b18,#0f1830 48%,#0b1124 100%);touch-action:pan-y;outline:none}
+.game-actions button{font:700 .9rem inherit;cursor:pointer;border:1px solid var(--bd);border-radius:12px;padding:12px 20px;background:var(--bg);color:var(--tx);min-height:48px;transition:transform .2s,border-color .2s,color .2s}
+.game-actions button:hover:not(:disabled){transform:translateY(-2px);border-color:var(--ac2)}
+.game-actions #gameJump{background:var(--ac2);color:#1a1200;margin-left:auto;touch-action:manipulation}
+.game-actions button:disabled{opacity:.45;cursor:default}
+.game-help{padding-top:0;color:var(--mut);font-size:.88rem}
+.game-help p{margin:0}
+#gameMessage{padding:0 22px 20px;color:var(--ac2);min-height:3.4em;line-height:1.5}
+#gameFinish{margin:0 22px 22px}
+#gameFinish[hidden]{display:none}
+.game-progress{height:5px;background:var(--bd)}
+#gameProgress{height:100%;width:0;background:linear-gradient(90deg,var(--ac2),#ff6f3c)}
+.game-legend{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 22px 22px}
+.game-legend div{background:var(--bg);border:1px solid var(--bd);border-radius:14px;padding:12px 13px}
+.game-legend b{display:block;font-size:.84rem;color:var(--tx);margin-bottom:4px}
+.game-legend small{color:var(--mut);font-size:.78rem;line-height:1.4;display:block}
+@media(max-width:760px){.game-legend{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){#gameCanvas{aspect-ratio:16/9}.game-actions{gap:8px;padding:14px}.game-actions button{padding:10px 13px}.game-top{padding:14px}.game-help{padding:0 14px 14px}.game-copy{padding:0 14px 14px}.game-legend{grid-template-columns:1fr;padding:0 14px 14px}}
+@media(min-width:861px) and (max-width:1180px){nav{position:fixed;inset:60px 12px auto;flex-direction:column;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:10px;display:none;margin:0}nav.open{display:flex}#th{margin-left:auto}.menu{display:grid}.hd{display:none}}
+#gameDuck{touch-action:manipulation}
+#gameDuck[aria-pressed="true"]{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+
+/* Michel Rally v5 — responsive gameplay, not a scaled-down desktop scene */
+#jogo{scroll-margin-top:85px}
+#jogo .ttl p{max-width:760px;margin:12px auto 0}
+#gameCanvas{width:100%;height:auto;aspect-ratio:8/3;touch-action:pan-y;image-rendering:auto}
+.game-actions{gap:10px}
+.game-actions button{min-height:48px;white-space:normal}
+.game-top{min-width:0}
+.game-top>div{min-width:0}
+.game-stats{font-variant-numeric:tabular-nums}
+#gameMessage{overflow-wrap:anywhere}
+#gameCanvas:focus-visible{outline:2px solid var(--ac2);outline-offset:-2px}
+@media(max-width:760px){
+  #gameCanvas{aspect-ratio:13/9}
+  #jogo{padding-inline:14px}
+  .game-shell{border-radius:20px}
+  .game-top{align-items:flex-start;gap:8px;flex-direction:column}
+  .game-top strong{font-size:.89rem}
+  .game-top small{font-size:.75rem}
+  .game-stats{font-size:.83rem}
+  .game-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px}
+  .game-actions button{width:100%;padding:12px 8px;min-height:54px;font-size:1rem;margin:0!important}
+  .game-actions #gameJump,.game-actions #gameDuck{grid-row:1}
+  .game-actions #gameJump{grid-column:1}
+  .game-actions #gameDuck{grid-column:2}
+  .game-actions #gameStart{grid-column:1;grid-row:2}
+  .game-actions #gamePause{grid-column:2;grid-row:2}
+  #gameMessage{padding:0 14px 14px;min-height:0;font-size:.94rem}
+  .game-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 14px 16px}
+  .game-legend div{padding:10px}
+  .game-copy{font-size:.87rem}
+  .game-help{font-size:.84rem}
+  #gameFinish{margin:0 14px 14px}
+}
+@media(max-width:760px){
+  .game-shell{display:flex;flex-direction:column}
+  .game-top{order:0}
+  .game-progress{order:1}
+  .game-copy{order:2}
+  #gameCanvas{order:3}
+  #gameMessage{order:4;min-height:48px;padding:12px 14px 8px;background:var(--bg2);line-height:1.45}
+  .game-actions{order:5}
+  .game-help{order:6}
+  .game-legend{order:7}
+  #gameFinish{order:8}
+}
+@media(max-width:360px){
+  #jogo{padding-inline:10px}
+  .game-legend{grid-template-columns:1fr}
+  .game-actions button{font-size:.9rem}
+}
+@media(hover:none) and (pointer:coarse){
+  .game-actions button:hover:not(:disabled){transform:none}
+  .game-actions button:active:not(:disabled){transform:scale(.98)}
+}
+
+/* Project screenshots keep their own styles, independent of game effects. */
+.project-preview{display:block;overflow:hidden;border-radius:10px;background:#eef2ff;line-height:0}
+.project-preview img{display:block;width:100%;height:auto;position:static;border-radius:0}
+.win>.project-preview{border-radius:0}
+.p>.project-preview{margin-bottom:18px;border:1px solid var(--bd)}
+.project-demo{margin-right:16px;margin-bottom:8px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="li" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+<symbol id="gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+<symbol id="ml" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></symbol>
+<symbol id="ar" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+<symbol id="sn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+<symbol id="gl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></symbol>
+<symbol id="cd" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+<symbol id="ph" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="pn" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="sd" viewBox="0 0 24 24"><path d="m22 2-11 11M22 2l-7 20-4-9-9-4z"/></symbol>
+</svg>
+<div id="bar"></div>
+<header><div class="nav">
+<a class="logo" href="#inicio"><img src="assets/images/michel-logo.jpg" alt="Michel Fiquene"><span>Michel<b>.</b></span></a>
+<nav id="nav" aria-label="Seções">
+<a href="#inicio" class="on">Início</a><a href="#sobre">Sobre</a><a href="#habilidades">Habilidades</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#certificacoes">Certificações</a><a href="#jogo">Jogue um pouco</a><a href="#contato">Contato</a>
+</nav>
+<button class="ib" id="th" aria-label="Alternar tema claro e escuro"><svg class="i"><use href="#sn"/></svg></button>
+<button class="ib lg" id="lg" aria-label="Mudar idioma"><svg class="i"><use href="#gl"/></svg><span id="ll">EN</span></button>
+<a class="btn hd" href="#contato">Vamos conversar <svg class="i"><use href="#ar"/></svg></a>
+<button class="ib menu" id="mn" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><svg class="i"><use href="#cd"/></svg></button>
+</div></header>
+
+<section id="inicio">
+<div>
+<span class="badge"><i></i>Aberto a oportunidades</span>
+<p class="hi">Olá, eu sou</p>
+<h1>Michel <span>Fiquene</span></h1>
+<div class="role" id="role" aria-live="off"></div>
+<div class="row">
+<a class="btn" href="#contato">Vamos conversar <svg class="i"><use href="#ar"/></svg></a>
+<a class="ib" href="https://linkedin.com/in/michel-jorge-fiquene-196658417" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#li"/></svg></a>
+<a class="ib" href="https://github.com/michelfiquene1-cmyk" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#gh"/></svg></a>
+<a class="ib" href="mailto:michelfiquene1@gmail.com" aria-label="E-mail"><svg class="i"><use href="#ml"/></svg></a>
+<a class="ib" href="https://wa.me/5598988610446" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#wa"/></svg></a>
+</div>
+</div>
+<div class="ph"><img src="assets/images/michel-perfil.jpg" alt="Foto de Michel Fiquene"></div>
+<div class="scroll">SCROLL</div>
+</section>
+
+<section id="sobre">
+<div class="ttl rv"><small>Sobre mim</small><h2>Quem sou eu</h2></div>
+<div class="about">
+<div class="ph rv"><img src="assets/images/michel-sobre.jpg" alt="Michel Fiquene sorrindo, de braços cruzados"></div>
+<div class="rv">
+<h3>Olá! Eu sou <span>Michel Fiquene</span></h3>
+<p class="ac" style="margin:0 0 14px">Tecnologia e Negócios</p>
+<p>Estudante de Análise e Desenvolvimento de Sistemas e de Administração, com base em Python e desenvolvimento web (HTML, CSS e JavaScript) e foco em full stack, back-end, cibersegurança e Power BI/dashboards. Uno conhecimento técnico à visão de negócios construída em vendas e empreendedorismo, e uso IA para automatizar tarefas. Busco estágio, CLT ou freelance em tecnologia e administração.</p>
+<div class="cards">
+<div class="c"><small>Formação</small><span>ADS, Universidade Ceuma (previsão 2028)</span></div>
+<div class="c"><small>Formação</small><span>Administração, Gran Faculdade (previsão 2029)</span></div>
+<div class="c"><small>Residência</small><span>São Luís, MA</span></div>
+<div class="c"><small>Idiomas</small><span>Português (nativo), Inglês (intermediário), Espanhol (básico a intermediário)</span></div>
+<div class="c"><small>E-mail</small><a href="mailto:michelfiquene1@gmail.com">michelfiquene1@gmail.com</a></div>
+<div class="c"><small>LinkedIn</small><a href="https://linkedin.com/in/michel-jorge-fiquene-196658417" target="_blank" rel="noopener">michel-jorge-fiquene</a></div>
+<div class="c"><small>GitHub</small><a href="https://github.com/michelfiquene1-cmyk" target="_blank" rel="noopener">michelfiquene1-cmyk</a></div>
+<div class="c"><small>Disponibilidade</small><span>Remoto, híbrido ou presencial (manhã)</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="habilidades">
+<div class="ttl rv"><small>Habilidades</small><h2>O que eu uso e estudo</h2></div>
+<div class="sk">
+<div class="k rv"><h3>Linguagens</h3><div class="tg"><span>Python</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div></div>
+<div class="k rv"><h3>Ferramentas</h3><div class="tg"><span>Git</span><span>GitHub</span><span>Figma Make</span><span>Lovable</span><span>Canva</span><span>Excel</span></div></div>
+<div class="k rv"><h3>Tecnologia</h3><div class="tg"><span>Lógica de programação</span><span>Desenvolvimento web</span><span>Análise de dados</span><span>UX/UI e prototipação</span><span>Automação</span></div></div>
+<div class="k rv"><h3>Áreas de foco</h3><div class="tg"><span>Full stack</span><span>Back-end</span><span>Cibersegurança</span><span>Power BI</span><span>Dashboards</span></div></div>
+<div class="k rv"><h3>Administração</h3><div class="tg"><span>Gestão financeira</span><span>Vendas</span><span>Atendimento</span><span>Empreendedorismo</span><span>Negócios</span></div></div>
+<div class="k rv"><h3>Inteligência Artificial</h3><div class="tg"><span>Engenharia de prompt</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Grok</span><span>Perplexity</span><span>Copilot</span></div></div>
+</div>
+</section>
+
+<section id="projetos">
+<div class="ttl rv"><small>Projetos</small><h2>O que já construí</h2></div>
+<article class="pf rv">
+<div class="win"><div><i></i><i></i><i></i></div><a class="project-preview" href="https://gestor-financeiro-michel.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Tela inicial do Gestor Financeiro"><img src="assets/images/gestor-financeiro.png" alt="Tela inicial do Gestor Financeiro" loading="lazy" decoding="async"></a></div>
+<div>
+<span class="tag">Python</span>
+<h3>Gestor Financeiro</h3>
+<p>Registra despesas, classifica por categoria (lazer, casa, alimentação e outras) e gera, ao fim do mês, um relatório com o total gasto e o valor por categoria.</p>
+<div class="tg"><span>Python</span><span>Organização de dados</span><span>Relatórios</span></div>
+<a class="lk project-demo" href="https://gestor-financeiro-michel.netlify.app/" target="_blank" rel="noopener noreferrer">Acessar projeto <svg class="i"><use href="#ar"/></svg></a>
+<a class="lk" href="https://github.com/michelfiquene1-cmyk/gestor-financeiro" target="_blank" rel="noopener">Ver no GitHub <svg class="i"><use href="#ar"/></svg></a>
+</div>
+</article>
+<div class="pg">
+<article class="p rv"><a class="project-preview" href="https://mm-negocios-catalogo.lovable.app/" target="_blank" rel="noopener noreferrer" aria-label="Tela inicial do catálogo MM Negócios"><img src="assets/images/mm-negocios.png" alt="Tela inicial do catálogo MM Negócios" loading="lazy" decoding="async"></a><span class="tag">Projeto comercial</span><h3>MM Negócios — Catálogo da Loja</h3><p>Site institucional com catálogo de produtos, criado e vendido para uma empresa de vendas e revendas. Desenvolvido sob encomenda para apresentar a loja, divulgar seus produtos e facilitar o contato com clientes.</p><div class="tg"><span>Lovable</span><span>Catálogo digital</span><span>Projeto vendido</span></div><a class="lk project-demo" href="https://mm-negocios-catalogo.lovable.app/" target="_blank" rel="noopener noreferrer">Acessar projeto <svg class="i"><use href="#ar"/></svg></a></article>
+<article class="p rv"><span class="tag">Hackathon · IA</span><h3>CaisGuard Fusion</h3><p>Proposta da equipe CodePulse no Porto Inova Itaqui para o desafio de resíduos perigosos e vazamentos: integrar o sistema existente com IA e um protótipo que detecta vazamentos e anomalias e envia relatório com local, setor e grau de risco.</p><div class="tg"><span>IA</span><span>Detecção de anomalias</span><span>Protótipo</span></div></article>
+<article class="p rv"><a class="project-preview" href="https://checklist-de-tarefas-todolist.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Tela inicial do Checklist de Tarefas"><img src="assets/images/checklist-tarefas.png" alt="Tela inicial do Checklist de Tarefas" loading="lazy" decoding="async"></a><span class="tag">Web</span><h3>Checklist de Tarefas</h3><p>Aplicação web em que a pessoa cadastra tarefas, marca como concluídas e vê a lista atualizada na própria página. Projeto acadêmico.</p><div class="tg"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="lk project-demo" href="https://checklist-de-tarefas-todolist.netlify.app/" target="_blank" rel="noopener noreferrer">Acessar projeto <svg class="i"><use href="#ar"/></svg></a> <a class="lk" href="https://github.com/michelfiquene1-cmyk/CHECKLIST-de-TAREFAS----TO-DO-LIST" target="_blank" rel="noopener">Ver no GitHub <svg class="i"><use href="#ar"/></svg></a></article>
+<article class="p rv"><span class="tag">Fundamentos</span><h3>Calculadora e Jogo de Adivinhação</h3><p>Dois programas em Python para praticar lógica, funções, condicionais e estruturas de repetição.</p><div class="tg"><span>Python</span><span>Lógica</span></div><a class="lk" href="https://github.com/michelfiquene1-cmyk" target="_blank" rel="noopener">Ver no GitHub <svg class="i"><use href="#ar"/></svg></a></article>
+</div>
+</section>
+
+<section id="experiencia">
+<div class="ttl rv"><small>Experiência</small><h2>Minha trajetória</h2></div>
+<div class="tl">
+<div class="t rv"><time>Outubro de 2026 — até o momento</time><h3>Estágio administrativo e de Sistemas Tecnológicos</h3><p>Atuo na área de sistemas corporativos, tecnologia aplicada à gestão e processos de RH, fortalecendo meu desenvolvimento profissional na área de tecnologia e de Desenvolvimento de Software.</p></div>
+<div class="t rv"><time>2024 — atual</time><h3>Vendedor autônomo e empreendedor</h3><p>Compra e revenda de aparelhos eletrônicos e objetos, com identificação de oportunidades, negociação e atendimento ao cliente. Venda de lanches para empresas e escritórios.</p></div>
+<div class="t rv"><time>Freelance</time><h3>Conteúdo digital e vídeo com IA</h3><p>Edição de vídeos imobiliários (apartamento e terreno) para corretor, com Canva, CapCut, Adobe, Google Earth e ferramentas de IA.</p></div>
+<div class="t rv"><time>Em início</time><h3>Sites com apoio de IA e marketing digital</h3><p>Começando a atuar na criação de sites com apoio de IA e em marketing digital, ao lado dos estudos em tecnologia e administração.</p></div>
+</div>
+</section>
+
+<section id="certificacoes">
+<div class="ttl rv"><small>Certificações</small><h2>Cursos e certificados</h2></div>
+<div class="ce">
+<div class="rv" data-m="UM"><small>Universidade de Michigan · Coursera</small><b>Python Basics</b></div>
+<div class="rv" data-m="UM"><small>Universidade de Michigan · Coursera</small><b>Python Data Collection and Processing</b></div>
+<div class="rv" data-m="IBM"><small>IBM · Coursera</small><b>Introdução a HTML, CSS e JavaScript</b></div>
+<div class="rv" data-m="UCD"><small>UC Davis · Coursera</small><b>JavaScript Basics</b></div>
+<div class="rv" data-m="IBM"><small>IBM · Coursera</small><b>Data Analyst</b></div>
+<div class="rv" data-m="USP"><small>USP · Coursera</small><b>Design</b></div>
+<div class="rv" data-m="G"><small>Google · Coursera</small><b>UX/UI e prototipação</b></div>
+<div class="rv" data-m="GR"><small>Gran Faculdade · 30 h</small><b>Engenharia de Prompt e Agentes de IA</b></div>
+<div class="rv" data-m="GR"><small>Gran Faculdade · 30 h</small><b>Empreendedorismo e Negócios</b></div>
+<div class="rv" data-m="AL"><small>Alura · 10 h</small><b>Imersão em IA</b></div>
+<div class="rv" data-m="SB"><small>Multicenter Sebrae / Porto Inova Itaqui · 10 h</small><b>Imersão em Startups, Conhecimentos Portuários e Tecnológicos</b></div>
+</div>
+</section>
+
+
+<section id="jogo" aria-labelledby="gameTitle">
+<div class="ttl"><small>Experiência interativa</small><h2 id="gameTitle">Michel Rally · jogue e me conheça</h2><p style="color:var(--mut)">Um minigame mais criativo: um carro esportivo com pegada off-road atravessa os desafios da jornada enquanto o cenário revela, de forma sutil, informações sobre mim, meus projetos e meu portfólio.</p></div>
+<div class="game-shell">
+<div class="game-top"><div><strong>MICHEL RALLY / PORTFÓLIO MODE</strong><small>As placas do caminho contam quem é o Michel enquanto você joga.</small></div><span class="game-stats" id="gameStats" data-nt>3 vidas · 0 insights · fase 1 · 0%</span></div>
+<div class="game-progress" role="progressbar" aria-label="Progresso da partida" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="gameMeter"><div id="gameProgress"></div></div>
+<div class="game-copy"><p><b>Ideia do jogo:</b> você acelera por uma estrada futurista, vendo no fundo pistas sobre o Michel: formação, stack, projetos, foco profissional e contato. Os obstáculos representam problemas clássicos de quem programa e constrói projetos.</p></div>
+<canvas id="gameCanvas" width="960" height="360" tabindex="0" role="img" aria-label="Minijogo do portfólio. Use espaço ou seta para cima para pular. Use seta para baixo ou S para abaixar o carro. No celular, use os botões abaixo.">Seu navegador precisa oferecer suporte a Canvas para jogar.</canvas>
+<div class="game-actions"><button id="gameStart" data-nt type="button">Começar</button><button id="gamePause" data-nt type="button" disabled>Pausar</button><button id="gameJump" data-nt type="button" disabled>Pular ↑</button><button id="gameDuck" data-nt type="button" disabled aria-pressed="false">Abaixar ↓</button></div>
+<div class="game-help"><p><b>Como jogar:</b> Espaço / ↑ pula. Segure ↓ / S para abaixar. No celular, toque em <b>Abaixar</b> para ativar e desativar. P pausa. O carro acelera com o tempo e os obstáculos ficam mais variados.</p></div>
+<div class="game-legend">
+<div><b>Bug inesperado</b><small>Quando algo foge do previsto no código. O carro precisa pular.</small></div>
+<div><b>Código legado</b><small>Partes antigas e difíceis de manter. Também exige salto.</small></div>
+<div><b>Reunião surpresa</b><small>Interrupções no fluxo. Abaixe o carro para passar por baixo.</small></div>
+<div><b>Deploy quebrado</b><small>Problemas na entrega em produção. Fique atento e abaixe na hora certa.</small></div>
+</div>
+<div id="gameMessage" data-nt role="status" aria-live="polite">Pronto para acelerar? Você tem 3 vidas. O cenário vai revelar informações sobre o Michel enquanto você joga.</div>
+<a id="gameFinish" class="btn" href="#contato" hidden>Curtiu? Vamos conversar →</a>
+</div></section>
+
+<section id="contato">
+<div class="ttl rv"><small>Contato</small><h2>Vamos conversar</h2></div>
+<div class="cg">
+<form class="fm rv" id="fm">
+<h3>Vamos Conversar</h3>
+<p>Tem uma oportunidade? Adoraria ouvir sobre ela.</p>
+<input name="n" placeholder="Seu nome" aria-label="Seu nome" required autocomplete="name">
+<input name="e" type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required autocomplete="email">
+<input name="s" placeholder="Assunto" aria-label="Assunto" required>
+<textarea name="m" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
+<button class="btn" type="submit"><svg class="i"><use href="#sd"/></svg>Enviar mensagem</button>
+<div class="st" id="st" role="status"></div>
+</form>
+<div class="ci rv">
+<h3>Informações de Contato</h3>
+<p>Busco estágio, vaga CLT ou freelance em tecnologia e administração. Vamos conversar!</p>
+<a class="ic" href="mailto:michelfiquene1@gmail.com"><span><svg class="i"><use href="#ml"/></svg></span><div><b>E-mail</b><small>michelfiquene1@gmail.com</small></div></a>
+<a class="ic" href="https://wa.me/5598988610446" target="_blank" rel="noopener"><span><svg class="i"><use href="#ph"/></svg></span><div><b>Telefone</b><small>+55 (98) 98861-0446</small></div></a>
+<div class="ic"><span><svg class="i"><use href="#pn"/></svg></span><div><b>Endereço</b><small>São Luís, Maranhão</small></div></div>
+<div class="cn">Conecte-se</div>
+<div class="row">
+<a class="ib" href="https://linkedin.com/in/michel-jorge-fiquene-196658417" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#li"/></svg></a>
+<a class="ib" href="https://github.com/michelfiquene1-cmyk" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#gh"/></svg></a>
+<a class="ib" href="mailto:michelfiquene1@gmail.com" aria-label="E-mail"><svg class="i"><use href="#ml"/></svg></a>
+<a class="ib" href="https://wa.me/5598988610446" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#wa"/></svg></a>
+</div>
+</div>
+</div>
+</section>
+<footer>© 2026 Michel Fiquene · São Luís, MA</footer>
+
+<div data-nt>
+<div class="bot" id="bot">
+<div class="bb" id="bb" role="status"></div>
+<button class="bk" id="bk" type="button"><svg viewBox="0 0 64 112" aria-hidden="true">
+<ellipse cx="32" cy="108" rx="18" ry="3" fill="rgba(0,0,0,.28)"/>
+<g class="lA"><rect x="21" y="64" width="9" height="38" rx="3" fill="#2f3647"/><rect x="19" y="99" width="13" height="7" rx="3" fill="#15171f"/></g>
+<g class="lB"><rect x="34" y="64" width="9" height="38" rx="3" fill="#2f3647"/><rect x="32" y="99" width="13" height="7" rx="3" fill="#15171f"/></g>
+<rect x="15" y="36" width="34" height="34" rx="9" fill="#1c2d5a"/>
+<rect x="30" y="38" width="4" height="13" rx="1" fill="#34497f"/><rect x="31.5" y="38" width="1" height="13" fill="#cfd8f2"/>
+<rect x="23" y="32" width="18" height="7" rx="3.5" fill="#15244a"/>
+<rect x="28" y="29" width="8" height="6" fill="#f3c9a6"/>
+<rect x="47" y="40" width="8" height="21" rx="4" fill="#1c2d5a"/><circle cx="51" cy="63" r="4" fill="#f3c9a6"/>
+<path d="M33 72h26l3 4H31z" fill="#aeb6c8"/><rect x="36" y="56" width="22" height="16" rx="2.5" fill="#1b2234" stroke="#aeb6c8" stroke-width="1.5"/><rect x="39" y="60" width="9" height="2" rx="1" fill="#9b87ff"/><rect x="39" y="64" width="14" height="2" rx="1" fill="#ffb020"/><rect x="39" y="68" width="6" height="2" rx="1" fill="#6ee7b7"/>
+<g><circle cx="32" cy="20" r="13" fill="#f5cfae"/><circle cx="19" cy="21" r="3" fill="#f5cfae"/><circle cx="45" cy="21" r="3" fill="#f5cfae"/>
+<path d="M18 19C16 5 33 1 43 8c5 4 5 11 3 15-2-6-7-9-13-9-6 0-11 3-15 5z" fill="#3b2a22"/><path d="M30 12c7-2 14 1 16 9-4-4-9-6-16-5z" fill="#4b362b"/>
+<circle cx="27" cy="21" r="3.3" fill="#fff"/><circle cx="37" cy="21" r="3.3" fill="#fff"/><circle class="pp" cx="27" cy="21" r="1.7" fill="#2a1d18"/><circle class="pp" cx="37" cy="21" r="1.7" fill="#2a1d18"/>
+<path d="M24 15.5q3-2 6-.5M34 15q3-1.500 6 .5" stroke="#3b2a22" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M27.500 27q4.500 4.500 9 0" stroke="#9b4a3a" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+<g class="a1"><rect x="9" y="40" width="9" height="26" rx="4.500" fill="#1c2d5a"/><circle cx="13.500" cy="67" r="4.200" fill="#f3c9a6"/><g class="gun"><rect x="11.500" y="70" width="4.500" height="9" rx="1.500" fill="#2b2f3a"/><rect x="11.500" y="77" width="4.500" height="2.500" fill="#ffb020"/></g></g>
+</svg></button>
+</div>
+<div class="cp" id="cp" role="dialog" aria-modal="false">
+<div class="ch"><b id="cn"></b><button id="co" type="button"></button><button id="cx" type="button">×</button></div>
+<div class="ms" id="ms" aria-live="polite"></div>
+<div class="chips" id="cc"></div>
+<div class="cf"><input id="ci" autocomplete="off"><button id="cs" type="button">➤</button></div>
+</div>
+<button class="bon" id="bon" type="button"></button>
+</div>
+<script>
+var R=document.documentElement;
+try{var s=localStorage.getItem("th");if(s)R.setAttribute("data-theme",s);else R.setAttribute("data-theme","dark")}catch(e){R.setAttribute("data-theme","dark")}
+document.getElementById("th").onclick=function(){var n=R.getAttribute("data-theme")==="dark"?"light":"dark";R.setAttribute("data-theme",n);try{localStorage.setItem("th",n)}catch(e){}};
+var nav=document.getElementById("nav"),menuButton=document.getElementById("mn");
+function setMenu(open){nav.classList.toggle("open",open);menuButton.setAttribute("aria-expanded",String(open))}
+menuButton.onclick=function(){setMenu(!nav.classList.contains("open"))};
+nav.onclick=function(){setMenu(false)};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){setMenu(false);menuButton.focus()}});
+var io=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e,i){e.style.transitionDelay=(i%3)*90+"ms";io.observe(e)});
+var links=[].slice.call(nav.querySelectorAll("a"));
+var so=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section").forEach(function(e){so.observe(e)});
+window.addEventListener("scroll",function(){var h=R.scrollHeight-innerHeight;document.getElementById("bar").style.width=(h>0?scrollY/h*100:0)+"%"},{passive:true});
+var WP=["Estudante de Análise e Desenvolvimento de Sistemas","Python e Desenvolvimento Web","Administração e Negócios"],WE=["Systems Analysis and Development student","Python and Web Development","Business Administration"],W=WP,el=document.getElementById("role");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){el.textContent=W[0]}else{var wi=0,ci=0,del=false;(function t(){var w=W[wi];ci+=del?-1:1;el.textContent=w.slice(0,ci);var d=del?25:55;if(!del&&ci===w.length){del=true;d=1600}else if(del&&ci===0){del=false;wi=(wi+1)%W.length;d=400}setTimeout(t,d)})()}
+var fm=document.getElementById("fm");
+fm.onsubmit=function(ev){ev.preventDefault();var f=fm.elements;var b=(L==="en"?"Name: ":"Nome: ")+f.n.value+"\nEmail: "+f.e.value+"\n\n"+f.m.value;
+document.getElementById("st").textContent=L==="en"?"Opening your email app. If nothing opens, write to michelfiquene1@gmail.com.":"Abrindo seu aplicativo de e-mail. Se nada abrir, escreva para michelfiquene1@gmail.com.";
+location.href="mailto:michelfiquene1@gmail.com?subject="+encodeURIComponent(f.s.value)+"&body="+encodeURIComponent(b)};
+var L="pt",EN={"Projeto comercial":"Commercial project","MM Negócios — Catálogo da Loja":"MM Negócios — Store Catalog","Site institucional com catálogo de produtos, criado e vendido para uma empresa de vendas e revendas. Desenvolvido sob encomenda para apresentar a loja, divulgar seus produtos e facilitar o contato com clientes.":"Business website with a product catalog, created and sold to a sales and resale company. Built to order to introduce the store, showcase its products and help customers get in touch.","Catálogo digital":"Digital catalog","Projeto vendido":"Sold project","Acessar projeto":"View live project","Início": "Home", "Sobre": "About", "Habilidades": "Skills", "Projetos": "Projects", "Experiência": "Experience", "Certificações": "Certifications", "Contato": "Contact", "Vamos conversar": "Let's talk", "Vamos Conversar": "Let's Talk", "Aberto a oportunidades": "Open to opportunities", "Olá, eu sou": "Hi, I'm", "Sobre mim": "About me", "Quem sou eu": "Who I am", "Olá! Eu sou": "Hi! I'm", "Tecnologia e Negócios": "Technology and Business", "Estudante de Análise e Desenvolvimento de Sistemas e de Administração, com base em Python e desenvolvimento web (HTML, CSS e JavaScript) e foco em full stack, back-end, cibersegurança e Power BI/dashboards. Uno conhecimento técnico à visão de negócios construída em vendas e empreendedorismo, e uso IA para automatizar tarefas. Busco estágio, CLT ou freelance em tecnologia e administração.": "Systems Analysis and Development and Business Administration student, with a foundation in Python and web development (HTML, CSS and JavaScript) and a focus on full stack, back-end, cybersecurity and Power BI/dashboards. I combine technical knowledge with a business mindset built through sales and entrepreneurship, and I use AI to automate tasks. I'm looking for an internship, a full-time (CLT) position or freelance work in technology and administration.", "Formação": "Education", "Residência": "Residence", "Idiomas": "Languages", "E-mail": "Email", "Disponibilidade": "Availability", "ADS, Universidade Ceuma (previsão 2028)": "Systems Analysis and Development, Ceuma University (expected 2028)", "Administração, Gran Faculdade (previsão 2029)": "Business Administration, Gran Faculdade (expected 2029)", "Português (nativo), Inglês (intermediário), Espanhol (básico a intermediário)": "Portuguese (native), English (intermediate), Spanish (basic to intermediate)", "Remoto, híbrido ou presencial (manhã)": "Remote, hybrid or on-site (mornings)", "O que eu uso e estudo": "What I use and study", "Linguagens": "Languages", "Ferramentas": "Tools", "Tecnologia": "Technology", "Áreas de foco": "Focus areas", "Administração": "Business", "Inteligência Artificial": "Artificial Intelligence", "Lógica de programação": "Programming logic", "Desenvolvimento web": "Web development", "Análise de dados": "Data analysis", "UX/UI e prototipação": "UX/UI and prototyping", "Automação": "Automation", "Cibersegurança": "Cybersecurity", "Gestão financeira": "Financial management", "Vendas": "Sales", "Atendimento": "Customer service", "Empreendedorismo": "Entrepreneurship", "Negócios": "Business", "Engenharia de prompt": "Prompt engineering", "O que já construí": "What I've built", "Espaço para o print do projeto": "Space for the project screenshot", "Gestor Financeiro": "Finance Manager", "Registra despesas, classifica por categoria (lazer, casa, alimentação e outras) e gera, ao fim do mês, um relatório com o total gasto e o valor por categoria.": "Records expenses, sorts them by category (leisure, home, food and others) and, at the end of the month, generates a report with the total spent and the amount per category.", "Organização de dados": "Data organization", "Relatórios": "Reports", "Ver no GitHub": "View on GitHub", "Hackathon · IA": "Hackathon · AI", "IA": "AI", "Proposta da equipe CodePulse no Porto Inova Itaqui para o desafio de resíduos perigosos e vazamentos: integrar o sistema existente com IA e um protótipo que detecta vazamentos e anomalias e envia relatório com local, setor e grau de risco.": "Proposal by team CodePulse at Porto Inova Itaqui for the hazardous waste and leak challenge: integrating the existing system with AI and a prototype that detects leaks and anomalies and sends a report with location, sector and risk level.", "Detecção de anomalias": "Anomaly detection", "Protótipo": "Prototype", "Checklist de Tarefas": "Task Checklist", "Aplicação web em que a pessoa cadastra tarefas, marca como concluídas e vê a lista atualizada na própria página. Projeto acadêmico.": "Web app where users add tasks, mark them as done and see the updated list on the same page. Academic project.", "Fundamentos": "Fundamentals", "Calculadora e Jogo de Adivinhação": "Calculator and Guessing Game", "Dois programas em Python para praticar lógica, funções, condicionais e estruturas de repetição.": "Two Python programs to practice logic, functions, conditionals and loops.", "Lógica": "Logic", "Minha trajetória": "My journey", "2024 — atual": "2024 — present", "Em início": "Just starting", "Vendedor autônomo e empreendedor": "Self-employed seller and entrepreneur", "Compra e revenda de aparelhos eletrônicos e objetos, com identificação de oportunidades, negociação e atendimento ao cliente. Venda de lanches para empresas e escritórios.": "Buying and reselling electronic devices and items, identifying opportunities, negotiating and serving customers. Selling snacks to companies and offices.", "Conteúdo digital e vídeo com IA": "Digital content and AI video", "Edição de vídeos imobiliários (apartamento e terreno) para corretor, com Canva, CapCut, Adobe, Google Earth e ferramentas de IA.": "Editing real estate videos (apartment and land) for a realtor, using Canva, CapCut, Adobe, Google Earth and AI tools.", "Sites com apoio de IA e marketing digital": "AI-assisted websites and digital marketing", "Começando a atuar na criação de sites com apoio de IA e em marketing digital, ao lado dos estudos em tecnologia e administração.": "Starting to work on building websites with AI support and on digital marketing, alongside my studies in technology and administration.", "Cursos e certificados": "Courses and certificates", "Universidade de Michigan · Coursera": "University of Michigan · Coursera", "Introdução a HTML, CSS e JavaScript": "Introduction to HTML, CSS and JavaScript", "Engenharia de Prompt e Agentes de IA": "Prompt Engineering and AI Agents", "Empreendedorismo e Negócios": "Entrepreneurship and Business", "Imersão em IA": "AI Immersion", "Imersão em Startups, Conhecimentos Portuários e Tecnológicos": "Immersion in Startups, Port and Technology Knowledge", "Tem uma oportunidade? Adoraria ouvir sobre ela.": "Got an opportunity? I'd love to hear about it.", "Seu nome": "Your name", "Seu e-mail": "Your email", "Assunto": "Subject", "Sua mensagem": "Your message", "Enviar mensagem": "Send message", "Informações de Contato": "Contact Information", "Busco estágio, vaga CLT ou freelance em tecnologia e administração. Vamos conversar!": "I'm looking for an internship, a full-time (CLT) role or freelance work in technology and administration. Let's talk!", "Telefone": "Phone", "Endereço": "Address", "Conecte-se": "Connect", "Alternar tema claro e escuro": "Toggle light/dark theme", "Abrir menu": "Open menu", "Seções": "Sections", "Mudar idioma": "Change language", "Foto de Michel Fiquene": "Photo of Michel Fiquene", "Michel Fiquene sorrindo, de braços cruzados": "Michel Fiquene smiling with arms crossed", "Michel Fiquene | Portfólio": "Michel Fiquene | Portfolio", "Portfólio de Michel Fiquene, estudante de Análise e Desenvolvimento de Sistemas e Administração. Python, desenvolvimento web e negócios.": "Portfolio of Michel Fiquene, Systems Analysis and Development and Business Administration student. Python, web development and business."};
+Object.assign(EN,{"Outubro de 2026 — até o momento": "October 2026 — present", "Estágio administrativo e de Sistemas Tecnológicos": "Administrative and Technology Systems Internship", "Atuo na área de sistemas corporativos, tecnologia aplicada à gestão e processos de RH, fortalecendo meu desenvolvimento profissional na área de tecnologia e de Desenvolvimento de Software.": "I work with corporate systems, technology applied to management and HR processes, strengthening my professional development in technology and Software Development."});
+Object.assign(EN,{
+"Jogue um pouco":"Play a little",
+"Tela inicial do Gestor Financeiro":"Finance Manager home screen",
+"Tela inicial do catálogo MM Negócios":"MM Negócios catalog home screen",
+"Tela inicial do Checklist de Tarefas":"Task Checklist home screen",
+"Experiência interativa":"Interactive experience",
+"Michel Rally · jogue e me conheça":"Michel Rally · play and get to know me",
+"Um minigame mais criativo: um carro esportivo com pegada off-road atravessa os desafios da jornada enquanto o cenário revela, de forma sutil, informações sobre mim, meus projetos e meu portfólio.":"A creative minigame: an off-road sports car tackles challenges along the journey while the scenery subtly reveals information about me, my projects and my portfolio.",
+"MICHEL RALLY / PORTFÓLIO MODE":"MICHEL RALLY / PORTFOLIO MODE",
+"As placas do caminho contam quem é o Michel enquanto você joga.":"Roadside signs introduce Michel as you play.",
+"Progresso da partida":"Game progress",
+"Ideia do jogo:":"Game idea:",
+"você acelera por uma estrada futurista, vendo no fundo pistas sobre o Michel: formação, stack, projetos, foco profissional e contato. Os obstáculos representam problemas clássicos de quem programa e constrói projetos.":"you drive along a futuristic road, spotting clues about Michel's education, stack, projects, career focus and contact details. The obstacles represent familiar problems faced by programmers and project builders.",
+"Minijogo do portfólio. Use espaço ou seta para cima para pular. Use seta para baixo ou S para abaixar o carro. No celular, use os botões abaixo.":"Portfolio minigame. Use Space or the up arrow to jump. Use the down arrow or S to duck the car. On mobile, use the buttons below.",
+"Seu navegador precisa oferecer suporte a Canvas para jogar.":"Your browser needs Canvas support to play.",
+"Seu navegador não suporta este jogo. Você pode continuar explorando o portfólio.":"Your browser does not support this game. You can keep exploring the portfolio.",
+"Começar":"Start", "Reiniciar":"Restart", "Pausar":"Pause", "Continuar":"Resume", "Pular ↑":"Jump ↑", "Abaixar ↓":"Duck ↓", "Abaixado ↓":"Ducking ↓",
+"Como jogar:":"How to play:",
+"Espaço / ↑ pula. Segure ↓ / S para abaixar. No celular, toque em":"Space / ↑ jumps. Hold ↓ / S to duck. On mobile, tap",
+"Abaixar":"Duck",
+"para ativar e desativar. P pausa. O carro acelera com o tempo e os obstáculos ficam mais variados.":"to toggle ducking. P pauses. The car speeds up over time and the obstacles become more varied.",
+"Bug inesperado":"Unexpected bug", "Código legado":"Legacy code", "Reunião surpresa":"Surprise meeting", "Deploy quebrado":"Broken deployment", "Prazo apertado":"Tight deadline",
+"Quando algo foge do previsto no código. O carro precisa pular.":"When something unexpected happens in the code. The car needs to jump.",
+"Partes antigas e difíceis de manter. Também exige salto.":"Old code that is hard to maintain. It also requires a jump.",
+"Interrupções no fluxo. Abaixe o carro para passar por baixo.":"Interruptions to your flow. Duck the car to pass underneath.",
+"Problemas na entrega em produção. Fique atento e abaixe na hora certa.":"Problems with a production release. Stay alert and duck at the right time.",
+"Pronto para acelerar? Você tem 3 vidas. O cenário vai revelar informações sobre o Michel enquanto você joga.":"Ready to drive? You have 3 lives. The scenery will reveal information about Michel as you play.",
+"Curtiu? Vamos conversar →":"Enjoyed it? Let's talk →",
+"{lives} vidas · {insights} insights · fase {level} · {percent}%":"{lives} lives · {insights} insights · level {level} · {percent}%",
+"ADS + Administração":"Systems + Business",
+"Tecnologia e negócios":"Technology and business",
+"Universidade Ceuma + Gran":"Ceuma University + Gran",
+"Projeto":"Project", "Relatórios e organização":"Reports and organization", "Objetivo":"Goal", "Cibersegurança + BI":"Cybersecurity + BI",
+"Vendas + empreendedorismo":"Sales + entrepreneurship", "IA no dia a dia":"AI in everyday life", "Calculadora em Python":"Python calculator",
+"Design e prototipação":"Design and prototyping", "Interfaces e fluxo":"Interfaces and flow", "Estágio, CLT ou freelance":"Internship, full-time or freelance",
+"Remoto, híbrido ou presencial":"Remote, hybrid or on-site", "Cidade":"City", "Visão local, ambição grande":"Local roots, big ambitions",
+"LinkedIn e WhatsApp":"LinkedIn and WhatsApp", "Portfólio":"Portfolio", "Aprendizado + execução":"Learning + execution", "Projetos reais em construção":"Real projects in progress",
+"quando algo sai diferente do esperado.":"when something does not go as expected.",
+"partes antigas e difíceis de manter.":"old code that is hard to maintain.",
+"interrupções que cortam o ritmo.":"interruptions that break your rhythm.",
+"quando a entrega falha em produção.":"when a production release fails.",
+"pressão para entregar rápido.":"pressure to deliver quickly.",
+"Pule para superar este bug inesperado!":"Jump over this unexpected bug!",
+"Código legado à frente. Use um bom salto!":"Legacy code ahead. Make a good jump!",
+"Reunião surpresa chegando por cima. Abaixe o carro!":"Surprise meeting overhead. Duck the car!",
+"Deploy quebrado descendo! Fique baixo e atento!":"Broken deployment coming down! Stay low and alert!",
+"Prazo apertado voando alto. Abaixe!":"Tight deadline flying overhead. Duck!",
+"PRAZO APERTADO":"TIGHT DEADLINE", "Pule!":"Jump!", "Abaixe!":"Duck!",
+"Começo de jornada: curiosidade, estudo e vontade de evoluir.":"The journey begins: curiosity, study and a desire to grow.",
+"Metade da corrida: Michel mistura tecnologia, negócios e visão prática.":"Halfway through: Michel combines technology, business and practical thinking.",
+"Reta final: projetos, constância e construção de soluções reais.":"The final stretch: projects, consistency and building real solutions.",
+"Últimos metros: bora transformar aprendizado em oportunidade.":"The last few meters: let's turn learning into opportunity.",
+"A corrida começou! Observe as placas do cenário para conhecer o Michel e vença os obstáculos de programador.":"The race has started! Watch the roadside signs to meet Michel and overcome programming obstacles.",
+"Você chegou ao final! Enquanto dirigia, conheceu formação, stack, projetos e objetivos do Michel. Se curtiu a experiência, vamos conversar!":"You reached the finish! Along the way, you learned about Michel's education, stack, projects and goals. If you enjoyed the experience, let's talk!",
+"Você foi vencido pelos obstáculos da jornada. Reinicie e tente de novo — em tecnologia, cada tentativa ensina algo.":"The journey's obstacles got the better of you. Restart and try again — in technology, every attempt teaches you something.",
+"Jogo pausado. Respire, ajuste a estratégia e continue quando quiser.":"Game paused. Take a breath, adjust your strategy and resume whenever you like.",
+"De volta à pista! Pule, abaixe e continue conhecendo o Michel.":"Back on the road! Jump, duck and keep getting to know Michel.",
+"Você bateu em {label} — {explain} Restam {lives} vidas.":"You hit {label} — {explain} You have {lives} lives left.",
+"Insight coletado! Continue acelerando para descobrir mais sobre o Michel.":"Insight collected! Keep driving to discover more about Michel.",
+"CHEGADA":"FINISH", "PORTFÓLIO":"PORTFOLIO",
+"Michel Rally · Portfólio":"Michel Rally · Portfolio", "Michel Rally · conheça o portfólio":"Michel Rally · explore my work",
+"Velocidade: {speed} · Insights: {insights} · Fase {level}":"Speed: {speed} · Insights: {insights} · Level {level}",
+"Acelere e descubra o Michel":"Drive and discover Michel", "Pausa estratégica":"Strategic pause", "Você concluiu a jornada!":"You completed the journey!", "Hora de tentar mais uma vez":"Time to try once more",
+"As placas do cenário vão te apresentar formação, stack e projetos.":"Roadside signs will introduce his education, stack and projects.",
+"Clique em Continuar quando quiser voltar à pista.":"Click Resume whenever you want to return to the road.",
+"Agora você já conhece o Michel sem nem perceber. Bora conversar?":"Now you've gotten to know Michel along the way. Let's talk?",
+"Em programação, cada obstáculo ensina algo. Reinicie e avance.":"In programming, every obstacle teaches you something. Restart and move forward."
+});
+var SKIP={role:1,st:1,ll:1},MD=document.querySelector('meta[name=description]'),T0=document.title,D0=MD.content;
+function X(o,l){var t=o.replace(/\s+/g," ").trim();if(l==="en"&&EN[t]!==undefined){var m=o.match(/^(\s*)([\s\S]*?)(\s*)$/);return m[1]+EN[t]+m[3]}return o}
+function setLang(l){L=l;R.lang=l==="en"?"en":"pt-BR";
+var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
+while(n=w.nextNode()){var p=n.parentNode;if(/^(SCRIPT|STYLE)$/.test(p.nodeName)||SKIP[p.id]||p.closest('[data-nt]'))continue;if(n.__o===undefined)n.__o=n.nodeValue;n.nodeValue=X(n.__o,l)}
+document.querySelectorAll("[aria-label],[placeholder],[alt]").forEach(function(e){["aria-label","placeholder","alt"].forEach(function(a){if(!e.hasAttribute(a))return;var k="__"+a;if(e[k]===undefined)e[k]=e.getAttribute(a);e.setAttribute(a,X(e[k],l))})});
+document.title=X(T0,l);MD.content=X(D0,l);
+document.getElementById("ll").textContent=l==="en"?"PT":"EN";
+W=l==="en"?WE:WP;wi=0;ci=0;del=false;if(matchMedia("(prefers-reduced-motion:reduce)").matches)el.textContent=W[0]}
+document.getElementById("lg").onclick=function(){var n=L==="en"?"pt":"en";setLang(n);try{localStorage.setItem("lg",n)}catch(e){}};
+try{if(localStorage.getItem("lg")==="en")setLang("en")}catch(e){}
+(function(){
+var $=function(i){return document.getElementById(i)},bot=$("bot"),bk=$("bk"),bb=$("bb"),cp=$("cp"),ms=$("ms"),cc=$("cc"),ci=$("ci"),bon=$("bon");
+var RM=matchMedia("(prefers-reduced-motion:reduce)").matches,open=false,off=false;
+try{off=localStorage.getItem("bo")==="1"}catch(e){}
+var S={pt:{n:"Assistente do Michel",ph:"Pergunte algo...",w1:"Andar: sim",w0:"Andar: não",off:"Desligar",cm:"Controlar",z0:"Destruir: desligado",z1:"Destruir: ligado",q:"Quer que eu destrua essa parte? 😈",yes:"Sim, destrua!",no:"Não",dh:"ou aperte D · Esc para recusar",hint:"Use as setas do teclado ou estes botões. Qualquer outro clique ou tecla me manda de volta.",al:["Cima","Esquerda","Baixo","Direita"],on:"Assistente",hi:"Oi! Eu sou o Assistente do Michel 👋 Posso te contar tudo sobre ele. Manda uma pergunta ou escolhe uma opção!",bub:"Oi! Clica em mim 👋",go:"Ver seção",nf:"Hmm, essa eu não sei 😅 Mas posso falar sobre o Michel, projetos, habilidades, formação, certificados, disponibilidade ou contato!",ch:["Quem é o Michel?","Projetos","Habilidades","Formação","Certificados","Disponibilidade","Contato"]},
+en:{n:"Michel's Assistant",ph:"Ask something...",w1:"Walk: on",w0:"Walk: off",off:"Turn off",cm:"Control",z0:"Break: off",z1:"Break: on",q:"Want me to wreck this part? 😈",yes:"Yes, wreck it!",no:"No",dh:"or press D · Esc to decline",hint:"Use the keyboard arrows or these buttons. Any other click or key sends me back.",al:["Up","Left","Down","Right"],on:"Assistant",hi:"Hi! I'm Michel's Assistant 👋 I can tell you all about him. Ask me something or pick an option!",bub:"Hi! Click me 👋",go:"Go to section",nf:"Hmm, I don't know that one 😅 But I can talk about Michel, projects, skills, education, certificates, availability or contact!",ch:["Who is Michel?","Projects","Skills","Education","Certificates","Availability","Contact"]}};
+var K=["who","proj","skill","edu","cert","av","ct"];
+var I={
+who:{k:["quem","sobre","michel","who","about","apresent","intro"],g:"sobre",pt:"O Michel é estudante de Análise e Desenvolvimento de Sistemas e de Administração, em São Luís. Curte Python, web e IA, e mistura tecnologia com visão de negócio, que veio de vendas e empreendedorismo.",en:"Michel studies Systems Analysis and Development and Business Administration, in São Luís. He likes Python, web and AI, and mixes tech with a business mindset that comes from sales and entrepreneurship."},
+proj:{k:["projet","project","github","gestor","checklist","caisguard","codigo","code","portfolio","app"],g:"projetos",pt:"Ele tem o Gestor Financeiro em Python (registra gastos, separa por categoria e faz relatório mensal), o CaisGuard Fusion do hackathon do Porto Inova Itaqui, um Checklist de tarefas em HTML/CSS/JS e dois jogos de lógica em Python. O código fica no GitHub dele.",en:"He has the Finance Manager in Python (logs expenses, sorts by category and builds a monthly report), CaisGuard Fusion from the Porto Inova Itaqui hackathon, a Task Checklist in HTML/CSS/JS and two logic games in Python. The code is on his GitHub."},
+skill:{k:["habilid","skill","tecnolog","linguagem","python","javascript","ferrament","stack","competenc","tool","tech","language","sabe","know"],g:"habilidades",pt:"Python, JavaScript, HTML e CSS, Git e GitHub, Figma Make e Lovable. Está de olho em full stack, back-end, cibersegurança e Power BI. Do lado de negócios, vendas, finanças e empreendedorismo. E ele usa bastante IA no dia a dia.",en:"Python, JavaScript, HTML and CSS, Git and GitHub, Figma Make and Lovable. He's focused on full stack, back-end, cybersecurity and Power BI. On the business side: sales, finance and entrepreneurship. And he uses AI a lot day to day."},
+edu:{k:["formacao","faculdade","estuda","universidade","graduacao","ads","adm","education","study","degree","college","ceuma","gran","school"],g:"sobre",pt:"Análise e Desenvolvimento de Sistemas na Universidade Ceuma (previsão 2028) e Administração na Gran Faculdade (previsão 2029).",en:"Systems Analysis and Development at Ceuma University (expected 2028) and Business Administration at Gran Faculdade (expected 2029)."},
+cert:{k:["certific","coursera","ibm","google","alura","sebrae","curso","course","diploma"],g:"certificacoes",pt:"Tem certificados de Python (Universidade de Michigan), HTML/CSS/JS (IBM), JavaScript (UC Davis), Data Analyst (IBM), Design (USP), UX/UI (Google), IA e Empreendedorismo (Gran), Imersão em IA (Alura) e a imersão do Sebrae no Porto Inova Itaqui.",en:"He has certificates in Python (University of Michigan), HTML/CSS/JS (IBM), JavaScript (UC Davis), Data Analyst (IBM), Design (USP), UX/UI (Google), AI and Entrepreneurship (Gran), AI Immersion (Alura) and the Sebrae immersion at Porto Inova Itaqui."},
+av:{k:["disponib","horario","remoto","presencial","estagio","vaga","clt","freelanc","available","intern","hire","hiring","job","remote","contrat"],g:"contato",pt:"Ele busca estágio, CLT ou freelance em tecnologia e administração. Topa remoto, híbrido ou presencial (de manhã, porque estuda à tarde).",en:"He's looking for an internship, a full-time (CLT) job or freelance work in tech and administration. Open to remote, hybrid or on-site (mornings, since he studies in the afternoon)."},
+ct:{k:["contato","contact","email","e-mail","whatsapp","telefone","linkedin","falar","phone","reach","talk","mensagem","message"],g:"contato",pt:"Dá pra falar com ele por e-mail (michelfiquene1@gmail.com), WhatsApp ou LinkedIn. Também tem o formulário na seção de contato!",en:"You can reach him by email (michelfiquene1@gmail.com), WhatsApp or LinkedIn. There's also a form in the contact section!"},
+lang:{k:["idioma","ingles","espanhol","language","english","spanish","fala"],g:"sobre",pt:"Português nativo, inglês intermediário e espanhol do básico ao intermediário.",en:"Native Portuguese, intermediate English and basic-to-intermediate Spanish."},
+exp:{k:["experiencia","vendas","trabalho","experience","work","sales","video","empreend"],g:"experiencia",pt:"Desde outubro de 2026, atua em estágio administrativo e de sistemas tecnológicos, com sistemas corporativos, tecnologia aplicada à gestão e processos de RH. Desde 2024 ele compra e revende eletrônicos e vende lanches para empresas. Também faz freelance de vídeos com IA e está começando a criar sites com apoio de IA.",en:"Since October 2026, he has worked in an administrative and technology systems internship, with corporate systems, technology applied to management and HR processes. Since 2024 he's bought and resold electronics and sold snacks to companies. He also freelances with AI video and is starting to build websites with AI support."},
+hi:{k:["oi","ola","hello","hey","bom dia","boa tarde","boa noite","hi"],pt:"Oi, tudo bem? 😄 Me pergunta sobre o Michel!",en:"Hey there! 😄 Ask me anything about Michel!"}};
+function L2(){return L==="en"?"en":"pt"}
+function add(t,c,g){var d=document.createElement("div");d.className="m "+c;d.textContent=t;if(g){var b=document.createElement("button");b.className="gb";b.type="button";b.textContent=S[L2()].go;b.onclick=function(){var s=$(g);if(s)s.scrollIntoView({behavior:RM?"auto":"smooth"})};d.appendChild(b)}ms.appendChild(d);ms.scrollTop=ms.scrollHeight}
+function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+function ask(q,key){add(q,"u");setTimeout(function(){var k=key,best=0;if(!k){var n=" "+norm(q)+" ";Object.keys(I).forEach(function(i){var sc=0;I[i].k.forEach(function(w){if(n.indexOf(w.length<3?" "+w+" ":w)>-1)sc++});if(sc>best){best=sc;k=i}})}
+if(k)add(I[k][L2()],"b",I[k].g);else add(S[L2()].nf,"b")},450)}
+function chips(){cc.textContent="";S[L2()].ch.forEach(function(t,i){var b=document.createElement("button");b.type="button";b.textContent=t;b.onclick=function(){ask(t,K[i])};cc.appendChild(b)})}
+function ui(){var s=S[L2()];$("cn").textContent=s.n;$("co").textContent=s.off;bon.textContent=s.on;ci.placeholder=s.ph;ci.setAttribute("aria-label",s.ph);bk.setAttribute("aria-label",s.n);cp.setAttribute("aria-label",s.n);$("cx").setAttribute("aria-label",L2()==="en"?"Close":"Fechar");bk.setAttribute("aria-expanded",String(open));bon.setAttribute("aria-expanded",String(open));chips()}
+window.botL=function(){ui();ms.textContent="";add(S[L2()].hi,"b")};
+function show(){bot.style.display=off?"none":"";bon.style.display=off?"block":"none";cp.classList.toggle("compact",off);cp.classList.toggle("open",open);bk.setAttribute("aria-expanded",String(open));bon.setAttribute("aria-expanded",String(open))}
+function setOpen(o){open=o;show();if(o)ci.focus()}
+bk.onclick=function(){setOpen(!open)};
+$("cx").onclick=function(){setOpen(false);(off?bon:bk).focus()};
+$("co").onclick=function(){off=true;try{localStorage.setItem("bo","1")}catch(e){}setOpen(false);bon.focus()};
+bon.onclick=function(){off=false;try{localStorage.setItem("bo","0")}catch(e){}setOpen(true)};
+$("cs").onclick=function(){var v=ci.value.trim();if(v){ci.value="";ask(v)}};
+ci.onkeydown=function(e){if(e.key==="Enter")$("cs").onclick()};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&open){setOpen(false);(off?bon:bk).focus()}});
+var _sl=setLang;setLang=function(l){_sl(l);window.botL()};
+window.botL();show();
+
+})();
+(function(){
+var RM2=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function rnd(s){return function(){s=(s*9301+49297)%233280;return s/233280}}
+document.querySelectorAll(".k,.ce>div").forEach(function(c,n){
+var r=rnd(n*37+11),svg="";
+for(var i=0;i<4;i++){var y=18+i*38+r()*12,L1=60+r()*90,L2=30+r()*70,y1=Math.max(8,Math.min(152,y+(r()>.5?1:-1)*(10+r()*18))),x1=320-L1,x2=x1-L2;
+svg+='<path class="tr" pathLength="1" d="M320 '+y.toFixed(1)+' H'+x1.toFixed(1)+' V'+y1.toFixed(1)+' H'+x2.toFixed(1)+'"/><circle class="nd" cx="'+x2.toFixed(1)+'" cy="'+y1.toFixed(1)+'" r="2.6"/>'}
+c.insertAdjacentHTML("afterbegin",'<svg class="zap" viewBox="0 0 320 160" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">'+svg+'</svg>');
+c.addEventListener("transitionend",function f(e){if(e.propertyName==="opacity"){c.style.transitionDelay="0ms";c.removeEventListener("transitionend",f)}});
+c.addEventListener("pointermove",function(e){var b=c.getBoundingClientRect(),mx=e.clientX-b.left,my=e.clientY-b.top;
+c.style.setProperty("--mx",mx+"px");c.style.setProperty("--my",my+"px");c.style.setProperty("--hue",(270-mx/b.width*235).toFixed(0));c.style.setProperty("--sp",".22");
+if(!RM2&&e.pointerType==="mouse"){var a=(my/b.height-.5)*-7,g=(mx/b.width-.5)*7;c.style.rotate=(a||g)?a.toFixed(2)+" "+g.toFixed(2)+" 0 "+Math.hypot(a,g).toFixed(2)+"deg":"none"}});
+c.addEventListener("pointerleave",function(){c.style.rotate="none";c.style.setProperty("--sp","0");c.style.removeProperty("--mx");c.style.removeProperty("--my")});
+});
+})();
+</script>
+<script>
+(function(){
+"use strict";
+var canvas=document.getElementById("gameCanvas"),ctx=canvas.getContext("2d"),start=document.getElementById("gameStart"),pause=document.getElementById("gamePause"),jumpButton=document.getElementById("gameJump"),duckButton=document.getElementById("gameDuck"),message=document.getElementById("gameMessage"),stats=document.getElementById("gameStats"),finish=document.getElementById("gameFinish"),meter=document.getElementById("gameMeter"),bar=document.getElementById("gameProgress");
+// Keep dynamic game text outside the page's static text-node translation cache.
+var messageText="Pronto para acelerar? Você tem 3 vidas. O cenário vai revelar informações sobre o Michel enquanto você joga.",messageValues={};
+function gameText(text){return X(text,L)}
+function gameFormat(text,values){return gameText(text).replace(/\{(\w+)\}/g,function(_,key){return gameText(String(values[key]))})}
+function renderMessage(){message.textContent=gameFormat(messageText,messageValues)}
+if(!ctx){
+  setMessage("Seu navegador não suporta este jogo. Você pode continuar explorando o portfólio.");start.disabled=true;
+  new MutationObserver(renderMessage).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+  return;
+}
+
+var W=960,H=360,ground=292,carX=152,total=20000,mobile=false;
+function resizeGame(){
+  // Fit the playable world to the device instead of shrinking the 960px game.
+  // Preserve the same Y coordinates/physics; only the camera width changes.
+  var cssWidth=Math.max(200,canvas.getBoundingClientRect().width);
+  var nextMobile=cssWidth<690;
+  mobile=nextMobile;
+  W=cssWidth<370?510:cssWidth<690?540:cssWidth<900?760:960;
+  carX=mobile?120:152;
+  var dpr=Math.min(window.devicePixelRatio||1,2,1600/cssWidth);
+  var bufferWidth=Math.max(1,Math.round(cssWidth*dpr));
+  var bufferHeight=Math.max(1,Math.round(canvas.getBoundingClientRect().height*dpr));
+  if(canvas.width!==bufferWidth||canvas.height!==bufferHeight){
+    canvas.width=bufferWidth;canvas.height=bufferHeight;
+  }
+  ctx.setTransform(bufferWidth/W,0,0,bufferHeight/H,0,0);
+  if(state!=="running")draw();
+}
+var state="ready",frame=0,last=0,elapsed=0,distance=0,speed=250,lives=3,insights=0,duck=false,y=ground-42,vy=0,jumps=0,invulnerable=0,seed=20261107,hintId="",checkpoint=0;
+var obstacles=[],pickups=[];
+var facts=[
+  {x:1000,title:"ADS + Administração",lines:["Tecnologia e negócios","Universidade Ceuma + Gran"]},
+  {x:1900,title:"Stack",lines:["Python · JS · HTML · CSS","Git · GitHub · Figma"]},
+  {x:3000,title:"Projeto",lines:["Gestor Financeiro","Relatórios e organização"]},
+  {x:4300,title:"Objetivo",lines:["Full stack · Back-end","Cibersegurança + BI"]},
+  {x:5700,title:"Experiência",lines:["Vendas + empreendedorismo","IA no dia a dia"]},
+  {x:7200,title:"Projetos",lines:["Checklist · CaisGuard","Calculadora em Python"]},
+  {x:9100,title:"UX/UI",lines:["Design e prototipação","Interfaces e fluxo"]},
+  {x:11100,title:"Disponibilidade",lines:["Estágio, CLT ou freelance","Remoto, híbrido ou presencial"]},
+  {x:13300,title:"Cidade",lines:["São Luís · Maranhão","Visão local, ambição grande"]},
+  {x:15500,title:"Contato",lines:["michelfiquene1@gmail.com","LinkedIn e WhatsApp"]},
+  {x:17700,title:"Portfólio",lines:["Aprendizado + execução","Projetos reais em construção"]}
+];
+var obstacleTypes={
+  bug:{kind:"ground",w:58,h:34,label:"Bug inesperado",explain:"quando algo sai diferente do esperado.",hint:"Pule para superar este bug inesperado!",draw:function(x,obj){ctx.fillStyle=obj.hit?"#5a5569":"#ef6b6b";roundRect(x,ground-obj.h,obj.w,obj.h,10,true);ctx.fillStyle="#1a0d12";ctx.font="bold 13px system-ui";ctx.fillText("BUG",x+10,ground-12);ctx.fillStyle="#ffd166";ctx.fillRect(x+obj.w-18,ground-obj.h+8,8,8);}},
+  legacy:{kind:"ground",w:62,h:44,label:"Código legado",explain:"partes antigas e difíceis de manter.",hint:"Código legado à frente. Use um bom salto!",draw:function(x,obj){ctx.fillStyle=obj.hit?"#5d5b70":"#7c6cff";roundRect(x,ground-obj.h,obj.w,obj.h,12,true);ctx.fillStyle="#dfe4ff";ctx.font="bold 11px system-ui";ctx.fillText("LEGACY",x+6,ground-22);ctx.fillStyle="#ffb020";for(var i=0;i<3;i++)ctx.fillRect(x+10+i*16,ground-14,8,6);}},
+  meeting:{kind:"air",w:86,h:28,label:"Reunião surpresa",explain:"interrupções que cortam o ritmo.",hint:"Reunião surpresa chegando por cima. Abaixe o carro!",draw:function(x,obj){var y0=ground-58+Math.sin(elapsed*5+obj.phase)*2;ctx.strokeStyle=obj.hit?"#5e5b70":"#d1b7ff";ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(x+14,y0+10);ctx.lineTo(x+34,y0+2);ctx.lineTo(x+56,y0+10);ctx.lineTo(x+74,y0+2);ctx.stroke();ctx.fillStyle=obj.hit?"#5e5b70":"#8a74ff";roundRect(x+18,y0+10,52,18,9,true);ctx.fillStyle="#fff";ctx.font="bold 10px system-ui";ctx.fillText("MEETING",x+22,y0+22);}},
+  deploy:{kind:"drop",w:64,h:38,label:"Deploy quebrado",explain:"quando a entrega falha em produção.",hint:"Deploy quebrado descendo! Fique baixo e atento!",draw:function(x,obj){var fy=40+obj.drop*182;ctx.save();ctx.setLineDash([6,8]);ctx.strokeStyle="#ffb02077";ctx.beginPath();ctx.moveTo(x+obj.w/2,0);ctx.lineTo(x+obj.w/2,ground-10);ctx.stroke();ctx.restore();ctx.fillStyle=obj.hit?"#5c5667":"#ffb020";roundRect(x,fy,obj.w,obj.h,10,true);ctx.fillStyle="#34253b";ctx.fillRect(x+8,fy+8,obj.w-16,obj.h-16);ctx.fillStyle="#ffd166";ctx.font="bold 19px system-ui";ctx.fillText("!",x+28,fy+25);}},
+  deadline:{kind:"air",w:92,h:26,label:"Prazo apertado",explain:"pressão para entregar rápido.",hint:"Prazo apertado voando alto. Abaixe!",draw:function(x,obj){var y0=ground-61;ctx.fillStyle=obj.hit?"#5d5765":"#ff8d6b";roundRect(x,y0,obj.w,obj.h,13,true);ctx.fillStyle="#2d1720";ctx.font="bold 10px system-ui";ctx.fillText(gameText("PRAZO APERTADO"),x+8,y0+17);ctx.fillStyle="#ffd166";ctx.beginPath();ctx.arc(x+74,y0+13,6,0,Math.PI*2);ctx.fill();}}
+};
+var milestones=[
+  "Começo de jornada: curiosidade, estudo e vontade de evoluir.",
+  "Metade da corrida: Michel mistura tecnologia, negócios e visão prática.",
+  "Reta final: projetos, constância e construção de soluções reais.",
+  "Últimos metros: bora transformar aprendizado em oportunidade."
+];
+
+function rand(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
+function roundRect(x,y,w,h,r,fill){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);if(fill)ctx.fill();else ctx.stroke()}
+function levelByDistance(d){return 1+Math.min(4,Math.floor(d/4500))}
+function level(){return levelByDistance(distance)}
+function obstaclePool(lv){var arr=["bug","legacy"];if(lv>=2)arr.push("meeting");if(lv>=3)arr.push("deploy");if(lv>=4)arr.push("deadline");return arr}
+function generateCourse(){
+  obstacles=[];pickups=[];seed=20261107;
+  var x=1040;
+  while(x<total+1200){
+    var lv=levelByDistance(x);
+    var pool=obstaclePool(lv);
+    var type=pool[Math.floor(rand()*pool.length)];
+    obstacles.push({type:type,x:x,w:obstacleTypes[type].w,h:obstacleTypes[type].h,hit:false,drop:0,phase:rand()*Math.PI*2,announced:false});
+    if(rand()>.38){
+      pickups.push({x:x+150+rand()*90,y:ground-110-rand()*46,taken:false});
+    }
+    x+=Math.max(mobile?455:290,510-lv*28+rand()*170)+(mobile?60:0);
+  }
+}
+function reset(){
+  state="ready";frame=0;last=0;elapsed=0;distance=0;speed=250;lives=3;insights=0;duck=false;y=ground-42;vy=0;jumps=0;invulnerable=0;hintId="";checkpoint=0;finish.hidden=true;generateCourse();updateHUD();
+}
+function updateHUD(){
+  var percent=Math.min(100,Math.floor(distance/total*100));
+  stats.textContent=gameFormat("{lives} vidas · {insights} insights · fase {level} · {percent}%",{lives:lives,insights:insights,level:level(),percent:percent});
+  bar.style.width=percent+"%";
+  meter.setAttribute("aria-valuenow",percent);
+  duckButton.setAttribute("aria-pressed",String(duck));
+  duckButton.textContent=gameText(duck?"Abaixado ↓":"Abaixar ↓");
+}
+function setControls(){
+  var active=state==="running";
+  start.textContent=gameText(state==="ready"?"Começar":"Reiniciar");
+  pause.disabled=!(state==="running"||state==="paused");
+  pause.textContent=gameText(state==="paused"?"Continuar":"Pausar");
+  jumpButton.textContent=gameText("Pular ↑");
+  jumpButton.disabled=!active;
+  duckButton.disabled=!active;
+}
+function setMessage(text,values){messageText=text;messageValues=values||{};renderMessage()}
+function begin(){cancelAnimationFrame(frame);frame=0;reset();state="running";setControls();setMessage("A corrida começou! Observe as placas do cenário para conhecer o Michel e vença os obstáculos de programador.");canvas.focus({preventScroll:true});schedule()}
+function end(won){state=won?"won":"lost";setControls();finish.hidden=!won;setMessage(won?"Você chegou ao final! Enquanto dirigia, conheceu formação, stack, projetos e objetivos do Michel. Se curtiu a experiência, vamos conversar!":"Você foi vencido pelos obstáculos da jornada. Reinicie e tente de novo — em tecnologia, cada tentativa ensina algo.");updateHUD();draw()}
+function jump(){if(state!=="running"||jumps>=2)return;duck=false;vy=-760;jumps++;updateHUD()}
+function setDuck(on){if(state!=="running")return;duck=on;updateHUD()}
+function togglePause(){if(state!=="running"&&state!=="paused")return;duck=false;state=state==="running"?"paused":"running";setControls();setMessage(state==="paused"?"Jogo pausado. Respire, ajuste a estratégia e continue quando quiser.":"De volta à pista! Pule, abaixe e continue conhecendo o Michel.");last=0;if(state==="running")schedule();else draw()}
+function carBox(){var h=duck?26:42,top=duck?y+16:y,bottom=top+h;return {left:carX-44,right:carX+48,top:top,bottom:bottom}}
+function collides(obs,sx){
+  var type=obstacleTypes[obs.type],box=carBox();
+  var top,bottom;
+  if(type.kind==="ground"){top=ground-obs.h;bottom=ground}
+  else if(type.kind==="air"){top=obs.type==="deadline"?ground-61:ground-58+Math.sin(elapsed*5+obs.phase)*2;bottom=top+obs.h}
+  else {top=40+obs.drop*182;bottom=top+obs.h}
+  return box.right>sx && box.left<sx+obs.w && box.bottom>top && box.top<bottom;
+}
+function obstacleHint(obs){var t=obstacleTypes[obs.type];setMessage("⚠️ {label} — {explain} {action}",{label:t.label,explain:t.explain,action:t.kind==="ground"?"Pule!":"Abaixe!"})}
+function step(dt){
+  if(state!=="running")return;
+  elapsed+=dt;
+  speed=Math.min(mobile?400:520,250+elapsed*(mobile?3.6:5.5));
+  distance+=speed*dt;
+  invulnerable=Math.max(0,invulnerable-dt);
+  vy+=1950*dt;
+  y+=vy*dt;
+  if(y>=ground-42){y=ground-42;vy=0;jumps=0}
+
+  for(var i=0;i<obstacles.length;i++){
+    var o=obstacles[i],sx=o.x-distance,t=obstacleTypes[o.type];
+    if(t.kind==="drop"&&sx<W+90)o.drop=Math.min(1,o.drop+dt*(mobile?1.25:1.5));
+    if(!o.announced&&sx<W-(mobile?36:230)&&sx>carX+110){o.announced=true;obstacleHint(o);}
+    if(!o.hit&&collides(o,sx)){
+      o.hit=true;
+      if(invulnerable<=0){
+        lives--;invulnerable=1.2;
+        setMessage("Você bateu em {label} — {explain} Restam {lives} vidas.",{label:t.label,explain:t.explain,lives:lives});
+        if(lives<=0){end(false);return;}
+      }
+    }
+  }
+  for(var g=0;g<pickups.length;g++){
+    var p=pickups[g],px=p.x-distance;
+    if(!p.taken&&Math.abs(px-carX)<42&&p.y>y-10&&p.y<y+62){p.taken=true;insights++;setMessage("Insight coletado! Continue acelerando para descobrir mais sobre o Michel.");}
+  }
+  if(checkpoint<milestones.length && distance>total*(checkpoint+1)/(milestones.length+1)){
+    setMessage(milestones[checkpoint]);
+    checkpoint++;
+  }
+  if(distance>=total){end(true);return}
+  updateHUD();
+}
+function drawSky(){
+  var grad=ctx.createLinearGradient(0,0,0,H);
+  grad.addColorStop(0,"#07101f");grad.addColorStop(.55,"#111e38");grad.addColorStop(1,"#0d1428");
+  ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
+  for(var i=0;i<36;i++){var sx=(i*139-distance*.08)%1020;if(sx<0)sx+=1020;ctx.fillStyle="#53608b";ctx.fillRect(sx,28+(i*47)%160,2,2)}
+  ctx.fillStyle="#101b31";ctx.beginPath();ctx.moveTo(0,210);for(var m=0;m<=W;m+=90){ctx.lineTo(m,186+Math.sin((m+distance*.08)/110)*18)}ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();ctx.fill();
+  ctx.fillStyle="#141f3d";for(var b=0;b<13;b++){var bx=(b*122-distance*.2)%1120;if(bx< -80)bx+=1120;var bh=70+(b%4)*16;ctx.fillRect(bx,205-bh,76,bh+88);ctx.fillStyle="#25345d";for(var wx=0;wx<4;wx++)for(var wy=0;wy<3;wy++)ctx.fillRect(bx+10+wx*14,205-bh+10+wy*16,7,8);ctx.fillStyle="#141f3d";}
+}
+function drawFacts(){
+  for(var i=0;i<facts.length;i++){
+    var fx=(mobile?facts[i].x-600:facts[i].x)-distance*.55;
+    if(fx<-220||fx>W+40)continue;
+    ctx.fillStyle="#30406d";ctx.fillRect(fx+20,146,8,146);ctx.fillRect(fx+172,146,8,146);
+    ctx.fillStyle="#f4f6ff";roundRect(fx,82,200,74,16,true);
+    ctx.fillStyle="#6d4fe0";ctx.fillRect(fx,82,200,18);
+    ctx.fillStyle="#fff";ctx.font="bold 12px 'Space Grotesk',system-ui";ctx.fillText(gameText(facts[i].title),fx+14,95);
+    ctx.fillStyle="#161a2e";ctx.font="bold 12px 'Space Grotesk',system-ui";ctx.fillText(gameText(facts[i].lines[0]),fx+14,120);ctx.font="11px 'Space Grotesk',system-ui";ctx.fillText(gameText(facts[i].lines[1]),fx+14,139);
+  }
+}
+function drawRoad(){
+  ctx.fillStyle="#0e1324";ctx.fillRect(0,ground,W,H-ground);
+  ctx.fillStyle="#1b2238";ctx.fillRect(0,ground+8,W,58);
+  ctx.fillStyle="#27304d";ctx.fillRect(0,ground+58,W,10);
+  for(var k=0;k<20;k++){var rx=(k*70-distance)%1040;if(rx<-40)rx+=1040;ctx.fillStyle="#8d95b5";ctx.fillRect(rx,ground+27,34,4)}
+  ctx.fillStyle="#6d4fe0";ctx.fillRect(0,ground-3,W,3);
+}
+function drawPickups(){
+  pickups.forEach(function(p){var x=p.x-distance;if(p.taken||x<-20||x>W+20)return;ctx.save();ctx.translate(x,p.y);ctx.rotate(Math.PI/4);ctx.fillStyle="#ffb020";ctx.fillRect(-8,-8,16,16);ctx.fillStyle="#fff4cb";ctx.fillRect(-3,-3,6,6);ctx.restore();});
+}
+function drawObstacles(){
+  obstacles.forEach(function(o){var x=o.x-distance;if(x<-140||x>W+140)return;obstacleTypes[o.type].draw(x,o);});
+}
+function drawGoal(){
+  var gx=total-distance+carX+80;
+  if(gx>W+40)return;
+  ctx.fillStyle="#ffb020";ctx.fillRect(gx,92,4,200);ctx.fillRect(gx+4,92,84,40);
+  ctx.fillStyle="#1a1200";ctx.font="bold 16px system-ui";ctx.fillText(gameText("CHEGADA"),gx+10,117);
+  ctx.fillStyle="#fff3c7";ctx.fillRect(gx+20,144,46,18);ctx.fillStyle="#1a1200";ctx.font="bold 10px system-ui";ctx.fillText(gameText("PORTFÓLIO"),gx+23,157);
+}
+function drawCar(){
+  if(invulnerable>0&&Math.floor(invulnerable*12)%2===1)return;
+  var top=duck?y+16:y,bodyH=duck?26:42;
+  ctx.save();ctx.translate(carX,top);
+  ctx.fillStyle="#0f1321";ctx.fillRect(-52,bodyH-2,104,4);
+  ctx.fillStyle="#d7182a";ctx.beginPath();
+  ctx.moveTo(-44,bodyH-2);ctx.lineTo(-30,10);ctx.lineTo(-6,2);ctx.lineTo(20,2);ctx.lineTo(40,12);ctx.lineTo(48,24);ctx.lineTo(46,bodyH-2);ctx.closePath();ctx.fill();
+  ctx.fillStyle="#f43f4f";ctx.beginPath();ctx.moveTo(-28,10);ctx.lineTo(-2,4);ctx.lineTo(18,4);ctx.lineTo(34,12);ctx.lineTo(20,16);ctx.lineTo(-18,16);ctx.closePath();ctx.fill();
+  ctx.fillStyle="#8b0f1d";ctx.fillRect(-44,bodyH-8,88,8);
+  ctx.fillStyle="#89a2d9";ctx.beginPath();ctx.moveTo(-17,8);ctx.lineTo(10,8);ctx.lineTo(24,15);ctx.lineTo(-6,15);ctx.closePath();ctx.fill();
+  ctx.fillStyle="#192849";ctx.fillRect(-8,9,10,6);ctx.fillRect(4,9,10,6);
+  ctx.fillStyle="#ffb020";ctx.fillRect(40,20,8,6);
+  ctx.fillStyle="#f8d5d5";ctx.fillRect(-48,20,6,6);
+  ctx.fillStyle="#20283f";ctx.fillRect(-34,bodyH-6,12,4);ctx.fillRect(18,bodyH-6,12,4);
+  ctx.fillStyle="#ffd166";ctx.fillRect(-20,bodyH-6,10,4);ctx.fillRect(4,bodyH-6,10,4);
+  [ -28, 24 ].forEach(function(wx){ctx.fillStyle="#05070d";ctx.beginPath();ctx.arc(wx,bodyH,15,0,Math.PI*2);ctx.fill();ctx.fillStyle="#aab3d1";ctx.beginPath();ctx.arc(wx,bodyH,7,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#6e7898";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(wx,bodyH);ctx.lineTo(wx+Math.cos(distance*.12)*6,bodyH+Math.sin(distance*.12)*6);ctx.stroke();});
+  ctx.fillStyle="#3c4d7c";ctx.fillRect(-50,bodyH-16,8,6);
+  ctx.fillStyle="#69779d";ctx.fillRect(-22,-2,18,4);
+  ctx.restore();
+}
+function drawHUDOverlay(){
+  ctx.fillStyle="rgba(8,10,18,.48)";roundRect(18,18,mobile?245:258,52,16,true);
+  ctx.fillStyle="#f5f7ff";ctx.font="bold 15px 'Space Grotesk',system-ui";ctx.fillText(gameText(mobile?"Michel Rally · Portfólio":"Michel Rally · conheça o portfólio"),34,40);
+  ctx.fillStyle="#b8c0dd";ctx.font="12px 'Space Grotesk',system-ui";ctx.fillText(gameFormat("Velocidade: {speed} · Insights: {insights} · Fase {level}",{speed:Math.round(speed),insights:insights,level:level()}),34,58);
+}
+function wrapCentered(text,x,y,maxWidth,lineHeight){
+  var words=text.split(" "),line="",lines=[];
+  words.forEach(function(word){
+    var trial=line?line+" "+word:word;
+    if(line&&ctx.measureText(trial).width>maxWidth){lines.push(line);line=word;}else line=trial;
+  });
+  if(line)lines.push(line);
+  lines.forEach(function(str,i){ctx.fillText(str,x,y+i*lineHeight)});
+}
+function drawStateOverlay(){
+  if(state==="running")return;
+  ctx.fillStyle="rgba(8,10,18,.66)";ctx.fillRect(0,0,W,H);
+  ctx.textAlign="center";
+  ctx.fillStyle="#f5f7ff";ctx.font="bold "+(mobile?26:30)+"px 'Space Grotesk',system-ui";
+  var heading=state==="ready"?"Acelere e descubra o Michel":state==="paused"?"Pausa estratégica":state==="won"?"Você concluiu a jornada!":"Hora de tentar mais uma vez";
+  wrapCentered(gameText(heading),W/2,142,mobile?W-50:W-80,34);
+  ctx.fillStyle="#c3c8e0";ctx.font=(mobile?16:18)+"px 'Space Grotesk',system-ui";
+  var line=state==="ready"?"As placas do cenário vão te apresentar formação, stack e projetos.":state==="paused"?"Clique em Continuar quando quiser voltar à pista.":state==="won"?"Agora você já conhece o Michel sem nem perceber. Bora conversar?":"Em programação, cada obstáculo ensina algo. Reinicie e avance.";
+  wrapCentered(gameText(line),W/2,mobile?206:195,mobile?W-65:W-80,24);
+  ctx.textAlign="start";
+}
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  drawSky();
+  drawFacts();
+  drawRoad();
+  drawPickups();
+  drawObstacles();
+  drawGoal();
+  drawCar();
+  drawHUDOverlay();
+  drawStateOverlay();
+}
+function schedule(){if(!frame)frame=requestAnimationFrame(tick)}
+function tick(t){frame=0;if(state!=="running")return;var dt=last?Math.min((t-last)/1000,.034):0;last=t;step(dt);draw();if(state==="running")schedule()}
+
+start.addEventListener("click",function(){if(state==="paused"){togglePause();return}begin()});
+pause.addEventListener("click",togglePause);
+jumpButton.addEventListener("pointerdown",function(e){e.preventDefault();jump()});
+jumpButton.addEventListener("click",function(e){if(e.detail===0)jump()});
+canvas.addEventListener("pointerdown",function(e){if(e.pointerType==="mouse") {canvas.focus({preventScroll:true});jump()}});
+duckButton.addEventListener("click",function(){setDuck(!duck)});
+var section=document.getElementById("jogo");
+section.addEventListener("keydown",function(e){
+  if(e.target.matches("input,textarea,a"))return;
+  if(e.code==="ArrowDown"||e.code==="KeyS"){e.preventDefault();setDuck(true)}
+  else if(e.code==="KeyP"){e.preventDefault();togglePause()}
+  else if((e.code==="Space"||e.code==="ArrowUp")&&!e.repeat&&!e.target.matches("button")){e.preventDefault();jump()}
+});
+section.addEventListener("keyup",function(e){if(e.code==="ArrowDown"||e.code==="KeyS"){e.preventDefault();setDuck(false)}});
+window.addEventListener("blur",function(){duck=false;if(state==="running")togglePause()});
+document.addEventListener("visibilitychange",function(){if(document.hidden&&state==="running")togglePause()});
+// Pause only after leaving the whole game area, not while scrolling to its mobile buttons.
+new IntersectionObserver(function(entries){if(!entries[0].isIntersecting&&state==="running")togglePause()},{threshold:.04}).observe(section);
+
+reset();setControls();renderMessage();resizeGame();
+// Refresh labels and the current frame without resetting the race or its message.
+new MutationObserver(function(){updateHUD();setControls();renderMessage();draw()}).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+if("ResizeObserver" in window){new ResizeObserver(resizeGame).observe(canvas)}
+else window.addEventListener("resize",resizeGame);
+window.addEventListener("orientationchange",resizeGame);
+})();
+</script>
+</body>
+</html>

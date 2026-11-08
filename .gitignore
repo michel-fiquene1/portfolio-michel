@@ -1,0 +1,34 @@
+# Original preservado apenas nesta máquina
+/Portfolio_Michel_V6_Experiencia.html
+
+# Credenciais e configurações locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.codex/
+.agents/
+.netlify/
+.npmrc
+
+# Dependências, logs e evidências locais
+node_modules/
+output/
+.playwright-cli/
+test-results/
+playwright-report/
+*.log
+*.tmp
+*.bak
+*.zip
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
